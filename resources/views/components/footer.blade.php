@@ -158,7 +158,7 @@
                 <div class="sub-holder">
                 <form action="" class="search-form disp-row sub">
                 <input type="text" placeholder="email.." name="search" class="search-box" id="searchbox">
-                <button type="submit disp-flex-row">
+                <button type="submit">
                     Subsrcribe
                     <i class="fa fa-check">
                     </i></button>

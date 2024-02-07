@@ -106,7 +106,50 @@
             </div>
         </div>
     </div>
-
+    <div class="comment-section disp-flex-col">
+        <div class="comment-box disp-flex-col">
+            <form class="comment-form disp-flex-row search-form disp-row sub">
+            <input type="text" placeholder="Post a comment" name="comment" class="search-box desc" id="comment" required>
+                <button type="submit">
+                    Post
+                    <i class="fa fa-check">
+                    </i>
+                </button>
+            </form>
+        </div>
+        <div class="the-comments">
+            <table class="the-comment">
+              <tr>
+                <th>
+                    <p class="desc">
+                        <strong>
+                            Comments
+                        </strong>
+                    </p>
+                    </th>
+                    <th>
+                    <p class="desc">
+                        <strong>
+                            Date
+                        </strong>
+                    </p>
+                    </th>
+              </tr>
+              <tr>
+                <td width="80%">
+                    <p class="desc">
+                    A torch is a portable handheld device that produces a beam of light, commonly used for illumination in various outdoor and indoor settings
+                    </p>
+                </td>
+                <td width="20%">
+                    <p class="desc">
+                        30-1-2024
+                    </p>
+                </td>
+              </tr>
+            </table>
+        </div>
+    </div>
 @include('components.related_posts')
 @include('components.footer')
 </body>

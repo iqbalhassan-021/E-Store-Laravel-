@@ -835,3 +835,33 @@
   .warning{
     color: red;
   }
+  .comment-section{
+    height: auto;
+    width: 100%;
+    padding: 50px 10px 50px 10px;
+  }
+  .comment-box{
+    height: auto;
+    width: 100%;
+    padding: 10px 5px 10px 5px;
+  }
+  .comment-form{
+    height: auto;
+    width: 50%;
+  }
+  .comment-form button{
+    background-color: #56ae6c;
+    color: white;
+  }
+  .the-comments{
+    width: 50%;
+    background-color: white;
+    height: auto;
+  }
+  .the-comment{
+    width: 100%;
+    text-align: left;
+  }
+  .the-comment p{
+    width: 100%;
+  }
