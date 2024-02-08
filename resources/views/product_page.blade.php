@@ -60,6 +60,14 @@
                     Dolore magna aliqua <br>
                     Excepteur sint
                 </p>
+                <p class="desc">
+                    <strong>
+                        Shipping Fee
+                    </strong>
+                </p>
+                <p class="desc">
+                    RS : 200
+                </p>
                 <div class="size-quality">
                     <div class="size-container">
                         <p class="desc">
@@ -106,7 +114,8 @@
             </div>
         </div>
     </div>
-    <div class="comment-section disp-flex-col">
+    <div class="comment-section ">
+        <div class="body-cover disp-flex-col">
         <div class="comment-box disp-flex-col">
             <form class="comment-form disp-flex-row search-form disp-row sub">
             <input type="text" placeholder="Post a comment" name="comment" class="search-box desc" id="comment" required>
@@ -117,6 +126,7 @@
                 </button>
             </form>
         </div>
+
         <div class="the-comments">
             <table class="the-comment">
               <tr>
@@ -148,6 +158,7 @@
                 </td>
               </tr>
             </table>
+        </div>
         </div>
     </div>
 @include('components.related_posts')
