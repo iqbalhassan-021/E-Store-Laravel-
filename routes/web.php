@@ -20,4 +20,5 @@ Route::get('/contact',[Controller::class,'contact']);
 Route::get('/products',[Controller::class,'products']);
 Route::get('/product',[Controller::class,'product']);
 Route::get('/auth',[Controller::class,'auth']);
+Route::get('/cart',[Controller::class,'cart']);
 Route::get('/user',[Controller::class,'user']);

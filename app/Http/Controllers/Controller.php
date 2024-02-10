@@ -27,6 +27,9 @@ class Controller extends BaseController
     public function auth(){
         return view("auth");
     }
+    public function cart(){
+        return view("cart");
+    }
     public function user(){
         return view("user");
     }

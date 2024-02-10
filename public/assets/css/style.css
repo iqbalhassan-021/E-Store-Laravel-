@@ -165,25 +165,25 @@
 }
 .title{
     font-family: 'Roboto', sans-serif;
-    font-size: 48px !important;
+    font-size: 48px ;
     font-weight: 200 !important;
     color: #009F04;
 }
 .tagline{
     font-family: 'Roboto', sans-serif;
-    font-size: 30px !important;
+    font-size: 30px ;
     font-weight: 300;
     color: #212529;
 }
 .desc{
     font-family: 'Roboto', sans-serif;
-    font-size: 18px !important;
+    font-size: 18px ;
     font-weight: 300 !important;
     color: #212529;
 }
 .link{
     font-family: 'Roboto', sans-serif;
-    font-size: 18px !important;
+    font-size: 18px ;
     font-weight: 300 !important;
     color: #009F04;
 }
@@ -956,4 +956,95 @@
   }
 .grand-total button{
   width: 320px;
+}
+.page-wrapper{
+  width: 100%;
+  height: auto;
+  padding: 50px 50px 50px 50px;
+}
+.user-panel{
+  height: auto;
+  width: 20%;
+  background-color: white;
+}
+.user-settings{
+  height: auto;
+  width: 80%;
+  background-color: #a0e5b413;
+  border-radius: 12px;
+  padding: 10px 10px 10px 10px;
+}
+.user-info{
+  height: auto;
+  width: auto;
+  background-color:white;
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+}
+
+
+.user-img{
+  height: 200px;
+  width: 200px;
+  margin-bottom: 10px;
+}
+.user-info button{
+  width: 100%;
+
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px 5px 5px 5px;
+  margin-top: 5px;
+  background-color: #56ae6c;
+  border-radius: 2px;
+
+}
+.user-info button>p{
+  color: white;
+}
+.tabbed-grid{
+  height: auto;
+  width: auto;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+
+}
+.tab-caller{
+  height: 200px;
+  width: 200px;
+  background-color: #92e3a92d;
+  border-radius: 12px;
+  box-shadow: 0px 0px 5px  silver;
+}
+.tab-caller p{
+  
+  font-size: 36px;
+}
+.tab-caller p:nth-child(2){
+  
+  font-size: 16px;
+}
+.tab-caller:hover{
+  background-color: #59ab6e;
+}
+.tab-caller:hover>p{
+  color: white;
+}
+.tabbed-grid{
+  display: grid;
+}
+.edit-profile{
+  height: auto;
+  width: 100%;
+  padding: 5px 5px 5px 5px;
+}
+.edit-user{
+  width: 100%;
+  height: auto;
+  background-color: white;
+  padding: 10px 10px 10px 10px;
+  border-radius: 2px;
+  display: none;
 }

@@ -19,228 +19,95 @@
 </head>
 <body>
 @include('components.header')
-    <div class="user-wrapper">
-        <div class="body-cover">
-            <div class="user-container">
-                <div class="user-name">
+<div class="page-wrapper">
+    <div class="body-cover disp-row">
+        <div class="user-panel">
+            <div class="user-info ">
+                <img src="{{asset('assets/images/man-user.svg')}}" alt="user" class="user-img">
+                <p class="desc">
+                    <strong>
+                        HASSAN ASHFAQ
+                    </strong>
+                </p>
+                <p class="desc">
+                    hassan47
+                </p>
+                <button>
                     <p class="desc">
-                        <strong>
-                            Username : 
-                        </strong>
+                        Edit Profile
+                        <i class="fas fa-edit"></i>
+                    </p>
+                </button>
+            </div>
+        </div>
+        <div class="user-settings disp-flex-col">
+            <div class="tabbed-grid">
+                <a href="" class="no-decoration">
+                <div class="tab-caller disp-flex-col">
+                    <p class="desc">
+                    <i class="fa fa-cart-shopping " id="prodcutcount">
+                        0
+                    </i>
                     </p>
                     <p class="desc">
-                        hassan47
+                        Cart
                     </p>
                 </div>
-                <div class="items-section disp-flex-col">
+                </a>
+                <a href="" class="no-decoration">
+                <div class="tab-caller disp-flex-col">
                     <p class="desc">
-                        My Cart
+                    <i class="fa-solid fa-truck-fast">
+                        0
+                    </i>
                     </p>
-                    <table>
-                        <tr>
-                        <div class="cart-item disp-flex-row">
-                        <div class="cart-img disp-flex-row">
-                            <img class="feature-prod-img" src="{{asset('assets/images/feature_prod_01.jpg')}}" alt="">
-                        </div>
-                        <div class="item-desc">
-                            <p class="desc">
-                            In e-commerce, the term "Featured Product" typically refers to an item that is highlighted or prominently displayed on the store's website or landing page. 
-                            This product is often chosen by the store owner or manager to showcase a particular item that they want to promote or draw attention to.
-                            </p>
-                        </div>
-                        <div class="price-sction">
-                        <p class="desc">
-                                <strong>
-                                    Name : 
-                                </strong>
-                                Product
-                            </p>
-                            <p class="desc">
-                                <strong>
-                                    Code : 
-                                </strong>
-                                Product code
-                            </p>
-                            <p class="desc">
-                                <strong>
-                                    Price : 
-                                </strong>
-                                750
-                            </p>
-                            <p class="desc">
-                                <strong>
-                                    Shipping Fee : 
-                                </strong>
-                                210
-                            </p>
-                            <p class="desc">
-                                <strong>
-                                    Quantity : 
-                                </strong>
-                                1
-                            </p>
-                            <p class="desc">
-                                <strong>
-                                    Total : 
-                                </strong>
-                                <span>
-                                    960
-                                </span>
-                            </p>
-                        </div>
-                        <div class="remove">
-                            <button class="remove-btn">
-                            <i class="fa-solid fa-xmark"></i>
-                            </button>
-                        </div>
-                    </div>
-                        </tr>
-                        <tr>
+                    <p class="desc">
+                        To be Shipped
+                    </p>
+                </div>
+                </a>
+                <a href="" class="no-decoration">
+                <div class="tab-caller disp-flex-col">
+                    <p class="desc">
+                    <i class="fa-solid fa-box">
+                        0
+                    </i>
+                    </p>
+                    <p class="desc">
+                        Products Purchased
+                    </p>
+                </div>
+                </a>
+            </div>
+            <div class="edit-profile disp-flex-col">
+            <form class="edit-user disp-flex-col" id="signup_form">
                             
-                    <div class="cart-item disp-flex-row">
-                        <div class="cart-img disp-flex-row">
-                            <img class="feature-prod-img" src="{{asset('assets/images/feature_prod_02.jpg')}}" alt="">
-                        </div>
-                        <div class="item-desc">
-                            <p class="desc">
-                            In e-commerce, the term "Featured Product" typically refers to an item that is highlighted or prominently displayed on the store's website or landing page. 
-                            This product is often chosen by the store owner or manager to showcase a particular item that they want to promote or draw attention to.
-                            </p>
-                        </div>
-                        <div class="price-sction">
-                        <p class="desc">
-                                <strong>
-                                    Name : 
-                                </strong>
-                                Product
-                            </p>
-                            <p class="desc">
-                                <strong>
-                                    Code : 
-                                </strong>
-                                Product code
-                            </p>
-                            <p class="desc">
-                                <strong>
-                                    Price : 
-                                </strong>
-                                750
-                            </p>
-                            <p class="desc">
-                                <strong>
-                                    Shipping Fee : 
-                                </strong>
-                                210
-                            </p>
-                            <p class="desc">
-                                <strong>
-                                    Quantity : 
-                                </strong>
-                                1
-                            </p>
-                            <p class="desc">
-                                <strong>
-                                    Total : 
-                                </strong>
-                                <span>
-                                    960
-                                </span>
-                            </p>
-                        </div>
-                        <div class="remove">
-                            <button class="remove-btn">
-                            <i class="fa-solid fa-xmark"></i>
-                            </button>
-                        </div>
-                    </div>
-                        </tr>
-                        <tr>
-                            
-                    <div class="cart-item disp-flex-row">
-                        <div class="cart-img disp-flex-row">
-                            <img class="feature-prod-img" src="{{asset('assets/images/feature_prod_03.jpg')}}" alt="">
-                        </div>
-                        <div class="item-desc">
-                            <p class="desc">
-                            In e-commerce, the term "Featured Product" typically refers to an item that is highlighted or prominently displayed on the store's website or landing page. 
-                            This product is often chosen by the store owner or manager to showcase a particular item that they want to promote or draw attention to.
-                            </p>
-                        </div>
-                        <div class="price-sction">
-                            <p class="desc">
-                                <strong>
-                                    Name : 
-                                </strong>
-                                Product
-                            </p>
-                            <p class="desc">
-                                <strong>
-                                    Code : 
-                                </strong>
-                                Product code
-                            </p>
-                            <p class="desc">
-                                <strong>
-                                    Price : 
-                                </strong>
-                                750
-                            </p>
-                            <p class="desc">
-                                <strong>
-                                    Shipping Fee : 
-                                </strong>
-                                210
-                            </p>
-                            <p class="desc">
-                                <strong>
-                                    Quantity : 
-                                </strong>
-                                1
-                            </p>
-                            <p class="desc">
-                                <strong>
-                                    Total : 
-                                </strong>
-                                <span>
-                                    960
-                                </span>
-                            </p>
-                        </div>
-                        <div class="remove">
-                            <button class="remove-btn">
-                            <i class="fa-solid fa-xmark"></i>
-                            </button>
-                        </div>
-                    </div>
-                        </tr>
-                        <tr>
-                            <td  width="80%">
-                            <div class="grand-total">
-                                <p class="desc right">
-                                    <strong>
-                                        Grand Total : 
-                                    </strong>
-                                    <span>
-                                        2250
-                                    </span>
+                            <label for="name" class="desc left">Name</label>
+                            <input required class="input-field login-input desc" type="text" id="name" name="name" placeholder="Full Name">
+                            <label for="username" class="desc left">Username</label>
+                            <input required class="input-field login-input desc" type="username" id="username" name="username" placeholder="Enter a username">
+                            <label for="password" class="desc left">Password</label>
+                            <input required class="input-field login-input desc" type="password" id="password" name="password" placeholder="Set a password">
+                            <label for="phone" class="desc left">Phone Nnmber</label>
+                            <input required class="input-field login-input desc" type="text" id="phone" name="phone" placeholder="Phone Nnmber">
+                           
+                            <label for="address" class="desc left">Shipping Address</label>
+                            <input required class="input-field login-input desc" type="text" id="address" name="address" placeholder="Shipping Address">
+                           
+                            <label for="securityquestion" class="desc left">Seacurity Quesntion</label>
+                            <input required class="input-field login-input desc" type="text" id="securityquestion" name="securityquestion" placeholder="Your last pet was a?">
+                       
+                            <span class="">
+                                <p class="desc warning">
+                           
                                 </p>
-                            </div>
-                            </td>
-                           <td>
-                           <div class="grand-total">
-                               <button class="button">
-                                    Checkout
-                               </button>
-                            </div>
-                           </td>
-                        </tr>
-
-                    </table>
-   
-                </div>
+                            </span>
+                            <input type="submit" class="login desc" value="Save Changes">
+                        </form>
             </div>
         </div>
     </div>
+</div>
 @include('components.footer')
 </body>
 </html>
