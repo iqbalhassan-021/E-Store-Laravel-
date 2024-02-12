@@ -1048,3 +1048,40 @@
   border-radius: 2px;
   display: none;
 }
+.admin-container{
+  height: 100vh;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+}
+.side-pannel{
+  height: 100%;
+  width: 250px;
+  padding: 10px 10px 10px 10px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.settings-pannel{
+  height: 100%;
+  width: 80%;
+  background-color: blue;
+}
+.admin-container button{
+  width: 100%;
+
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px 5px 5px 5px;
+  margin-top: 5px;
+  background-color: #56ae6c;
+  border-radius: 2px;
+
+}
+.admin-container button>p{
+  color: white;
+}

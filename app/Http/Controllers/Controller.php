@@ -33,4 +33,7 @@ class Controller extends BaseController
     public function user(){
         return view("user");
     }
+    public function admin(){
+        return view("admin");
+    }
 }
