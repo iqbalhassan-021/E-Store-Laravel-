@@ -17,128 +17,144 @@
     
     <title></title>
 </head>
-<body>
+<body style=" ">
 
-<div class="page-wrapper">
-    <div class="body-cover disp-row">
-        <div class="user-panel">
-            <div class="user-info ">
-                <img src="{{asset('assets/images/man-admin.svg')}}" alt="user" class="user-img">
+<div class="admin-panel disp-row">
+
+        <div class="nav-panel">
+            <p class="tagline">
+                <strong>
+                    Store Name
+                </strong>
+            </p>
+            <button class="dash-btn">
                 <p class="desc">
-                    <strong>
-                        HASSAN ASHFAQ
-                    </strong>
+                <i class="fa-solid fa-gauge"></i>
+                 <span class="x-dash-btn">Dashboard</span>
                 </p>
+            </button>
+            <button class="dash-btn">
                 <p class="desc">
-                    Admin
+                <i class="fa-solid fa-store"></i>
+                <span class="x-dash-btn">Edit Store</span>
                 </p>
-                <button>
-                    <p class="desc">
-                    <i class="fas fa-edit"></i>
-                        Edit Profile
-                    </p>
-                </button>
-                <button>
-                    <p class="desc">
-                    <i class="fa-solid fa-box"></i>
-                    All Products
-                    </p>
-                </button>
-                <button>
-                    <p class="desc">
-                    <i class="fa-solid fa-code-pull-request"></i>
-                        New Requests
-                    </p>
-                </button>
-                <button>
-                    <p class="desc">
-                    <i class="fa-solid fa-user"></i>
-                        Users
-                    </p>
-                </button>
-                <button>
-                    <p class="desc">
-                    <i class="fa-solid fa-comment"></i>
-                        Feedbacks
-                    </p>
-                </button>
-                <button>
-                    <p class="desc">
-                    <i class="fa-solid fa-store"></i>
-                        Edit Store
-                    </p>
-                </button>
-                <button>
-                    <p class="desc">
-                    <i class="fa-solid fa-house"></i>
-                        Go to Home
-                    </p>
-                </button>
-            </div>
+            </button>
+            <button class="dash-btn">
+                <p class="desc">
+                <i class="fa-solid fa-user"></i>
+                <span class="x-dash-btn">Edit Profile</span>
+                </p>
+            </button>
+            <button class="dash-btn">
+                <p class="desc">
+                <i class="fa-solid fa-list"></i>
+                <span class="x-dash-btn">Categories</span>
+                </p>
+            </button>
+            <button class="dash-btn">
+                <p class="desc">
+                <i class="fa-brands fa-product-hunt"></i>
+                <span class="x-dash-btn">Products</span>
+                </p>
+            </button>
+            <button class="dash-btn">
+                <p class="desc">
+                <i class="fa-solid fa-border-all"></i>
+                <span class="x-dash-btn">New Orders</span>
+                </p>
+            </button>
+            <button class="dash-btn">
+                <p class="desc">
+                <i class="fa-solid fa-user"></i>
+                <span class="x-dash-btn">Users</span>
+                </p>
+            </button>
+            <button class="dash-btn">
+                <p class="desc">
+                <i class="fa-solid fa-comment"></i>
+                <span class="x-dash-btn">Feedbacks</span>
+                </p>
+            </button>
+            <button class="dash-btn">
+                <p class="desc">
+                <i class="fa-solid fa-arrow-left"></i>
+                <span class="x-dash-btn">Home</span>
+                </p>
+            </button>
+            <button class="dash-btn">
+                <p class="desc">
+                <i class="fa-solid fa-circle-chevron-up fa-rotate-270"></i>
+                <span class="x-dash-btn">collapse</span>
+                </p>
+            </button>
         </div>
-        <div class="user-settings disp-flex-col">
-            <div class="tabbed-grid">
-                <a href="" class="no-decoration">
-                <div class="tab-caller disp-flex-col">
-                    <p class="desc">
-                    <i class="fa fa-cart-shopping " id="prodcutcount">
-                        0
-                    </i>
-                    </p>
-                    <p class="desc">
-                        Cart
-                    </p>
+            <div class="setting-panel ">
+                <div class="dashborad">
+                <div class="tab">
+                    <div class="welcome disp-flex-row">
+                        <div class="info">
+                            <p class="title">
+                                <strong>
+                                    Admin Panel
+                                </strong>
+                            </p>
+                            <p class="desc">
+                                Admin control in an e-commerce website is essential for managing product listings, user accounts, and transactions effectively. It allows administrators to oversee inventory, moderate user-generated content, and ensure secure transactions, contributing to the website's functionality and customer satisfaction. Admins have the authority to add, edit, or remove products, manage user accounts securely, and monitor transactions for a seamless e-commerce experience.
+                            </p>
+                        </div>
+                        <div class="admin-img disp-flex-row">
+                        <img src="{{asset('assets/images/admin-img.png')}}" alt="user" class="user-img">
+                        </div>
+                    </div>
                 </div>
-                </a>
-                <a href="" class="no-decoration">
-                <div class="tab-caller disp-flex-col">
-                    <p class="desc">
-                    <i class="fa-solid fa-truck-fast">
-                        0
-                    </i>
-                    </p>
-                    <p class="desc">
-                        To be Shipped
-                    </p>
-                </div>
-                </a>
-                <a href="" class="no-decoration">
-                <div class="tab-caller disp-flex-col">
-                    <p class="desc">
-                    <i class="fa-solid fa-box">
-                        0
-                    </i>
-                    </p>
-                    <p class="desc">
-                        Products Purchased
-                    </p>
-                </div>
-                </a>
-            </div>
-            <div class="edit-profile disp-flex-col">
-            <form class="edit-user disp-flex-col" id="signup_form">
-                            
-                            <label for="name" class="desc left">Name</label>
-                            <input required class="input-field login-input desc" type="text" id="name" name="name" placeholder="Full Name">
-                            <label for="username" class="desc left">Username</label>
-                            <input required class="input-field login-input desc" type="username" id="username" name="username" placeholder="Enter a username">
-                            <label for="password" class="desc left">Password</label>
-                            <input required class="input-field login-input desc" type="password" id="password" name="password" placeholder="Set a password">
-                            <label for="phone" class="desc left">Phone Nnmber</label>
-                            <input required class="input-field login-input desc" type="text" id="phone" name="phone" placeholder="Phone Nnmber">  
-                            <label for="securityquestion" class="desc left">Seacurity Quesntion</label>
-                            <input required class="input-field login-input desc" type="text" id="securityquestion" name="securityquestion" placeholder="Your last pet was a?">
-                       
-                            <span class="">
-                                <p class="desc warning">
-                           
+                <div class="tab">
+                    <div class="controls disp-flex-row">
+                        <div class="grid">
+                            <div class="tab-caller disp-flex-col">
+                                <p class="desc">
+                                    <i class="fa-solid fa-user"></i>
                                 </p>
-                            </span>
-                            <input type="submit" class="login desc" value="Save Changes">
-                        </form>
+                                <p class="desc">
+                                Users
+                                <span class="x-dash-btn">0</span>
+                                </p>
+                               
+                            </div>
+                            <div class="tab-caller disp-flex-col">
+                                <p class="desc">
+                                <i class="fa-solid fa-border-all"></i>
+                                </p>
+                                <p class="desc">
+                                New Orders
+                                <span class="x-dash-btn">0</span>
+                                </p>
+                               
+                            </div>
+                            <div class="tab-caller disp-flex-col">
+                                <p class="desc">
+                                <i class="fa-brands fa-product-hunt"></i>
+                                </p>
+                                <p class="desc">
+                                All Products
+                                <span class="x-dash-btn">0</span>
+                                </p>
+                               
+                            </div>
+                            <div class="tab-caller disp-flex-col">
+                                <p class="desc">
+                                <i class="fa-solid fa-list"></i>
+                                </p>
+                                <p class="desc">
+                                Categories
+                                <span class="x-dash-btn">0</span>
+                                </p>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
+            </div>
 </div>
 </body>
 </html>

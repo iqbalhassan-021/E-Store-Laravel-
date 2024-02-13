@@ -1014,23 +1014,9 @@
 .tab-caller{
   height: 200px;
   width: 200px;
-  background-color: #92e3a92d;
+
   border-radius: 12px;
   box-shadow: 0px 0px 5px  silver;
-}
-.tab-caller p{
-  
-  font-size: 36px;
-}
-.tab-caller p:nth-child(2){
-  
-  font-size: 16px;
-}
-.tab-caller:hover{
-  background-color: #59ab6e;
-}
-.tab-caller:hover>p{
-  color: white;
 }
 .tabbed-grid{
   display: grid;
@@ -1084,4 +1070,116 @@
 }
 .admin-container button>p{
   color: white;
+}
+.admin-dashboard{
+  display: none;
+}
+.all-user{
+  width: 100%;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px ;
+  font-weight: 300 !important;
+  color: #212529;
+
+}
+.all-user tr:nth-child(even){
+
+  background-color: #009f0538;
+}
+.all-user tr:hover{
+  
+  background-color: #009f0538;
+}
+th{
+  background-color: #56ae6c;
+}
+td,th{
+  text-align: left;
+}
+.admin-panel{
+  height: auto;
+  width: 100%;
+  background-color: white;
+
+}
+.nav-panel{
+  height: auto;
+  width: 250px;
+  padding: 10px 10px 10px 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+.dash-btn{
+  margin-top: 10px;
+  background-color: #efefef;
+  border: none;
+  outline: none;
+  border-radius:5px;
+  height: 40px;
+  padding-left: 20px;
+  width: 100%;
+  cursor: pointer;
+  text-align: left;
+}
+.dash-btn p{
+  color: black;
+}
+.setting-panel{
+  height: auto;
+  width: 100%;
+  padding: 50px 10px 10px 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+
+}
+.welcome{
+  height: auto;
+  width: 900px;
+  background-color: #efefef;
+  border-radius:8px;
+  padding: 10px 10px 10px 10px;
+}
+.info{
+  height: 100%;
+  width: 70%;
+
+}
+.info p{
+  color: black;
+  text-align: justify;
+}
+.admin-img{
+  height: auto;
+  width: 30%;
+
+}
+.controls{
+  width: 900px;
+  height: auto;
+  background-color: white;
+  padding: 10px 10px 10px 10px;
+  border-radius:8px;
+
+}
+.grid{
+  height: auto;
+  width: auto;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 30px;
+}
+.tab-caller{
+  background-color: #efefef;
+
+}
+.tab-caller p:nth-child(1){
+  font-size: 66px;
+}
+.dashborad{
+  height: auto;
+  width: auto;
 }
