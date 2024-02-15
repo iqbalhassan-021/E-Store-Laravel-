@@ -1083,6 +1083,9 @@
   color: #212529;
 
 }
+.all-user img{
+  width: 200px;
+}
 .all-user tr:nth-child(even){
 
   background-color: #009f0538;
@@ -1091,11 +1094,29 @@
   
   background-color: #009f0538;
 }
+tr{
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px ;
+  font-weight: 300 !important;
+  color: #212529;
+  height: auto;
+
+}
 th{
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px ;
+  font-weight: 300 !important;
+  color: #212529;
+  color: white;
   background-color: #56ae6c;
 }
 td,th{
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px ;
+  font-weight: 300 !important;
+  color: #212529;
   text-align: left;
+
 }
 .admin-panel{
   height: auto;
@@ -1165,7 +1186,7 @@ td,th{
   border-radius:8px;
 
 }
-.grid{
+.tab-grid{
   height: auto;
   width: auto;
   display: grid;
@@ -1180,6 +1201,99 @@ td,th{
   font-size: 66px;
 }
 .dashborad{
+  height: auto;
+  width: auto;
+  display: none;
+}
+.hidden{
+  display: none;
+}
+.edit-store{
+  height: auto;
+  width: auto;
+  display: none;
+}
+
+label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px ;
+  font-weight: 300 !important;
+  color: #212529;
+}
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px ;
+  font-weight: 300 !important;
+  color: #212529;
+}
+.submit-btn {
+  background-color: #efefef;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px ;
+  font-weight: 300 !important;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.submit-btn:hover {
+  background-color: #45a049;
+  color: white;
+}
+.warning:hover {
+  background-color: red;
+  color: white;
+}
+.edit-slides{
+  height: auto;
+  width: auto;
+  display: none;
+}
+.sticky{
+  height: auto;
+  width:auto;
+
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0; /* required */
+
+}
+.edit-admin{
+  height: auto;
+  width: auto;
+  display: none;
+}
+.new-categories{
+  height: auto;
+  width: auto;
+  display: none;
+}
+.edit-products{
+  height: auto;
+  width: auto;
+  display: none;
+}
+.setting-panel{
+  width: 100%;
+}
+.new-orders{
+  height: auto;
+  width: auto;
+  display: none;
+}
+.all-userstable{
   height: auto;
   width: auto;
 }
