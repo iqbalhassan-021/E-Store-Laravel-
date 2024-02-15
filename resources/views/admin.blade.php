@@ -414,6 +414,8 @@
                 <th>Product Name</th>
                 <th>Product Code</th>
                 <th>Product Image</th>
+                <th>Quantity</th>
+                <th>Size</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -426,6 +428,8 @@
                 <td>Product 1</td>
                 <td>P001</td>
                 <td><img src="{{asset('assets/images/category_img_03.jpg')}}" alt="Product 1"></td>
+                <td>1</td>
+                <td>L</td>
                 <td>
                 <button class="submit-btn ">Aprove</button>
                    <button class="submit-btn warning">Remove</button>   
@@ -438,6 +442,8 @@
                 <td>Product 1</td>
                 <td>P001</td>
                 <td><img src="{{asset('assets/images/category_img_03.jpg')}}" alt="Product 1"></td>
+                <td>1</td>
+                <td>L</td>
                 <td>
                 <button class="submit-btn ">Aprove</button>
                    <button class="submit-btn warning">Remove</button>   
@@ -450,6 +456,8 @@
                 <td>Product 1</td>
                 <td>P001</td>
                 <td><img src="{{asset('assets/images/category_img_03.jpg')}}" alt="Product 1"></td>
+                <td>1</td>
+                <td>L</td>
                 <td>
                 <button class="submit-btn ">Aprove</button>
                    <button class="submit-btn warning">Remove</button>   
@@ -462,6 +470,8 @@
                 <td>Product 1</td>
                 <td>P001</td>
                 <td><img src="{{asset('assets/images/category_img_03.jpg')}}" alt="Product 1"></td>
+                <td>1</td>
+                <td>L</td>
                 <td>
                 <button class="submit-btn ">Aprove</button>
                    <button class="submit-btn warning">Remove</button>   
@@ -474,6 +484,8 @@
                 <td>Product 1</td>
                 <td>P001</td>
                 <td><img src="{{asset('assets/images/category_img_03.jpg')}}" alt="Product 1"></td>
+                <td>1</td>
+                <td>L</td>
                 <td>
                 <button class="submit-btn ">Aprove</button>
                    <button class="submit-btn warning">Remove</button>   
@@ -486,6 +498,8 @@
                 <td>Product 1</td>
                 <td>P001</td>
                 <td><img src="{{asset('assets/images/category_img_03.jpg')}}" alt="Product 1"></td>
+                <td>1</td>
+                <td>L</td>
                 <td>
                 <button class="submit-btn ">Aprove</button>
                    <button class="submit-btn warning">Remove</button>   

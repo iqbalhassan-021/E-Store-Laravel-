@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!--Main CSS-->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
@@ -10,104 +11,105 @@
     <!--Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
 
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
+
     <title></title>
 </head>
+
 <body>
-@include('components.header')
-<div class="page-wrapper">
-    <div class="body-cover disp-row">
-        <div class="user-panel">
-            <div class="user-info ">
-                <img src="{{asset('assets/images/man-user.svg')}}" alt="user" class="user-img">
-                <p class="desc">
+    <div class="admin-panel disp-row">
+        <div class="nav-panel">
+            <div class="sticky">
+                <p class="tagline">
                     <strong>
-                        HASSAN ASHFAQ
+                        Store Name
                     </strong>
                 </p>
-                <p class="desc">
-                    hassan47
-                </p>
-                <button>
+                <button class="dash-btn" id="dash-btn">
                     <p class="desc">
-                        Edit Profile
-                        <i class="fas fa-edit"></i>
+                        <i class="fa-solid fa-user"></i>
+                        <span class="x-dash-btn" id="x-dash-btn">Edit Profile</span>
+                    </p>
+                </button>
+                <button class="dash-btn" id="dash-btn">
+                    <p class="desc">
+                        <i class="fa-brands fa-product-hunt"></i>
+                        <span class="x-dash-btn">Progress</span>
+                    </p>
+                </button>
+                <button class="dash-btn" id="dash-btn">
+                    <p class="desc">
+                    <i class="fa fa-cart-shopping ">
+                    </i>
+                        <span class="x-dash-btn" id="x-dash-btn">Cart</span>
+                    </p>
+                </button>
+
+                <button class="dash-btn" id="dash-btn">
+                    <p class="desc">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        <span class="x-dash-btn" id="x-dash-btn">Home</span>
+                    </p>
+                </button>
+                <button class="dash-btn collapse" id="collapse" onclick="collapse()">
+                    <p class="desc">
+                        <i class="fa-solid fa-circle-chevron-up fa-rotate-270"></i>
+                        <span class="x-dash-btn" id="x-dash-btn">collapse</span>
                     </p>
                 </button>
             </div>
         </div>
-        <div class="user-settings disp-flex-col">
-            <div class="tabbed-grid">
-                <a href="" class="no-decoration">
-                <div class="tab-caller disp-flex-col">
-                    <p class="desc">
-                    <i class="fa fa-cart-shopping " id="prodcutcount">
-                        0
-                    </i>
-                    </p>
-                    <p class="desc">
-                        Cart
-                    </p>
-                </div>
-                </a>
-                <a href="" class="no-decoration">
-                <div class="tab-caller disp-flex-col">
-                    <p class="desc">
-                    <i class="fa-solid fa-truck-fast">
-                        0
-                    </i>
-                    </p>
-                    <p class="desc">
-                        To be Shipped
-                    </p>
-                </div>
-                </a>
-                <a href="" class="no-decoration">
-                <div class="tab-caller disp-flex-col">
-                    <p class="desc">
-                    <i class="fa-solid fa-box">
-                        0
-                    </i>
-                    </p>
-                    <p class="desc">
-                        Products Purchased
-                    </p>
-                </div>
-                </a>
+        <div class="setting-panel ">
+            <div class="edit-admin">
+                <form action="#" method="post">
+                    <label for="username">Username:</label><br>
+                    <input type="text" id="username" name="username" class="input-field" required><br>
+
+                    <label for="password">New Password:</label><br>
+                    <input type="password" id="password" name="password" class="input-field" required><br>
+
+                    <label for="confirmPassword">Confirm New Password:</label><br>
+                    <input type="password" id="confirmPassword" name="confirmPassword" class="input-field" required><br>
+                    <label for="securityques">Your last pet was a?</label><br>
+                    <input type="text" id="securityques" name="securityques" class="input-field" required><br>
+
+                    <input type="submit" value="Update Account" class="submit-btn">
+                </form>
+
             </div>
-            <div class="edit-profile disp-flex-col">
-            <form class="edit-user disp-flex-col" id="signup_form">
-                            
-                            <label for="name" class="desc left">Name</label>
-                            <input required class="input-field login-input desc" type="text" id="name" name="name" placeholder="Full Name">
-                            <label for="username" class="desc left">Username</label>
-                            <input required class="input-field login-input desc" type="username" id="username" name="username" placeholder="Enter a username">
-                            <label for="password" class="desc left">Password</label>
-                            <input required class="input-field login-input desc" type="password" id="password" name="password" placeholder="Set a password">
-                            <label for="phone" class="desc left">Phone Nnmber</label>
-                            <input required class="input-field login-input desc" type="text" id="phone" name="phone" placeholder="Phone Nnmber">
-                           
-                            <label for="address" class="desc left">Shipping Address</label>
-                            <input required class="input-field login-input desc" type="text" id="address" name="address" placeholder="Shipping Address">
-                           
-                            <label for="securityquestion" class="desc left">Seacurity Quesntion</label>
-                            <input required class="input-field login-input desc" type="text" id="securityquestion" name="securityquestion" placeholder="Your last pet was a?">
-                       
-                            <span class="">
-                                <p class="desc warning">
-                           
-                                </p>
-                            </span>
-                            <input type="submit" class="login desc" value="Save Changes">
-                        </form>
+            <div class="progress">
+                
+                <table class="all-user">
+                    <thead>
+                        <tr>
+                            <th>Product Name</th>
+                            <th>Product Code</th>
+                            <th>Tracking ID</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Product 1</td>
+                            <td>123456</td>
+                            <td>ABC123</td>
+                        </tr>
+                        <tr>
+                            <td>Product 2</td>
+                            <td>789012</td>
+                            <td>XYZ456</td>
+                        </tr>
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
-</div>
-@include('components.footer')
+
 </body>
+
 </html>
