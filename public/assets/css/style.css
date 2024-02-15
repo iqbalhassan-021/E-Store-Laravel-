@@ -1072,7 +1072,7 @@
   color: white;
 }
 .admin-dashboard{
-  display: none;
+
 }
 .all-user{
   width: 100%;
@@ -1203,7 +1203,7 @@ td,th{
 .dashborad{
   height: auto;
   width: auto;
-  display: none;
+
 }
 .hidden{
   display: none;
@@ -1296,4 +1296,10 @@ label {
 .all-userstable{
   height: auto;
   width: auto;
+  display: none;
+}
+.all-fedbacks{
+  height: auto;
+  width: auto;
+  display: none;
 }

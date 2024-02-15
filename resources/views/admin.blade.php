@@ -535,6 +535,49 @@
         </tbody>
     </table>
             </div>
+            <div class="all-fedbacks">
+            <table class="all-user">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Username</th>
+                <th>Phone Number or Email</th>
+                <th>Feedbacks</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Sample row, replace with dynamic data -->
+            <tr>
+                <td>John Doe</td>
+                <td>johndoe123</td>
+                <td>john@example.com</td>
+                <td>I recently purchased the [Product Name] from [E-commerce Platform]. Overall, I am quite satisfied with my purchase and would like to share my experience with other potential buyers.</td>
+            </tr>
+            <tr>
+                <td>John Doe</td>
+                <td>johndoe123</td>
+                <td>john@example.com</td>
+              
+                <td>I recently purchased the [Product Name] from [E-commerce Platform]. Overall, I am quite satisfied with my purchase and would like to share my experience with other potential buyers.</td>
+            </tr>
+            <tr>
+                <td>John Doe</td>
+                <td>johndoe123</td>
+                <td>john@example.com</td>
+              
+                <td>I recently purchased the [Product Name] from [E-commerce Platform]. Overall, I am quite satisfied with my purchase and would like to share my experience with other potential buyers.</td>
+            </tr>
+            <tr>
+                <td>John Doe</td>
+                <td>johndoe123</td>
+                <td>john@example.com</td>
+              
+                <td>I recently purchased the [Product Name] from [E-commerce Platform]. Overall, I am quite satisfied with my purchase and would like to share my experience with other potential buyers.</td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+            </div>
             </div>
 </div>
 <script>
