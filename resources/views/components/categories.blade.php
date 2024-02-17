@@ -21,7 +21,7 @@
                         <br>
                         <a href="#" class="go shop no-decoration">
                             <p class="">
-                                GO SHOP
+                                See Products
                             </p>
                         </a>      
                     </div>
@@ -36,7 +36,7 @@
                         <br>
                         <a href="#" class="go shop no-decoration">
                             <p class="">
-                                GO SHOP
+                            See Products
                             </p>
                         </a>      
                     </div>
@@ -51,7 +51,7 @@
                         <br>
                         <a href="#" class="go shop no-decoration">
                             <p class="">
-                                GO SHOP
+                            See Products
                             </p>
                         </a>      
                     </div>

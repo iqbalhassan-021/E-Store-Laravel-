@@ -335,6 +335,7 @@
                 <th>Product Code</th>
                 <th>Product Description</th>
                 <th>Category</th>
+                <th>Size</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -348,6 +349,7 @@
                 <td>P001</td>
                 <td>Description of Product 1</td>
                 <td>Glasses</td>
+                <td>L</td>
                 <td>
                 <button class="submit-btn ">Edit</button>
                    <button class="submit-btn warning">Remove</button>
@@ -361,6 +363,7 @@
                 <td>P001</td>
                 <td>Description of Product 1</td>
                 <td>Glasses</td>
+                <td>L</td>
                 <td>
                 <button class="submit-btn ">Edit</button>
                    <button class="submit-btn warning">Remove</button>
@@ -374,6 +377,7 @@
                 <td>P001</td>
                 <td>Description of Product 1</td>
                 <td>Glasses</td>
+                <td>L</td>
                 <td>
                 <button class="submit-btn ">Edit</button>
                    <button class="submit-btn warning">Remove</button>
@@ -400,6 +404,9 @@
         
         <label for="productCategory">Category:</label><br>
         <input type="text" id="productCategory" name="productCategory" class="input-field" required><br>
+        
+        <label for="productsize">Size:</label><br>
+        <input type="text" id="productsize" name="productsize" class="input-field" required><br>
         
         <input type="submit" value="Add Product" class="submit-btn">
     </form>
@@ -549,7 +556,7 @@
         </tbody>
     </table>
             </div>
-            <div class="all-fedbacks">
+            <div class="all-feedbacks">
             <table class="all-user">
         <thead>
             <tr>

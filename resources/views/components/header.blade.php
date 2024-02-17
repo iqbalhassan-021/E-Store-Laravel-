@@ -11,7 +11,7 @@
             </button>
 </div> -->
 <div class="header" id="header">
-    <div class="body-cover ">
+    <div class="body-cover disp-flex-col">
        <div class="navbar disp-flex-row" id="navbar">
             <div class="logoholder disp-flex-row" id="logoholder">
                 <a href="#" class="logo no-decoration" >
@@ -55,7 +55,46 @@
                     <i class="fa fa-fw fa-user">
                     </i>
                 </a>
+                <a class="nav-call disp-flex-row" onclick="mobilenavshow()" id="bars">
+                <i class="fa-solid fa-bars"></i>
+                </a>
+                <a class="nav-call disp-flex-row" onclick="mobilenavshow()" id="cross">
+                <i class="fa-solid fa-x"></i>
+                </a>
+              
             </div>
+       </div>
+       <div class="mobile-nav " id="mobilenav">
+
+
+                    <a href="#" class="no-decoration">
+                         <p class="desc">HOME</p>
+                    </a>
+                    <a href="#" class="no-decoration">
+                         <p class="desc">ABOUT</p>
+                    </a>
+                    <a href="#" class="no-decoration">
+                         <p class="desc">SHOP</p>
+                    </a>
+                    <a href="#" class="no-decoration">
+                         <p class="desc">CONTACT</p>
+                    </a>
        </div>
     </div>
 </div>
+<script>
+    function mobilenavshow() {
+        var nav = document.getElementById('mobilenav');
+        var cross = document.getElementById('cross');
+        var bars = document.getElementById('bars');
+        if (nav.style.display === "none" || nav.style.display === "") {
+            nav.style.display = "flex";
+            cross.style.display = "flex";
+            bars.style.display = "none";
+        } else {
+            nav.style.display = "none";
+            cross.style.display = "none";
+            bars.style.display = "flex"; 
+        }
+    }
+</script>

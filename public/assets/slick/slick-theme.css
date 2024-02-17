@@ -213,3 +213,8 @@
     border-radius: 120px;
   
 }
+@media screen and (max-width: 610px) {
+    .slick-dots{
+        bottom: -13px;
+    }   
+}

@@ -1,7 +1,7 @@
 <div class="footer">
     <div class="body-cover">
         <div class="the-footer ">
-            <div class="tab disp-flex-row">
+            <div class="tab disp-flex-row footer-section">
             <div class="tab ">
                 <div class="footer-card">
                     <h2 class="tagline" style="color: white;">
@@ -93,7 +93,7 @@
             <div class="tab ">
                 <div class="footer-card">
                     <h2 class="tagline" style="color: white;">
-                        Further Info
+                       Pages
                     </h2>
                     <hr style="width:100%;text-align:left;margin-left:0;color:silver;">
                     <ul>
@@ -121,7 +121,7 @@
                         <li>
                             <p class="desc">
                                 <a href="#" class="no-decoration">
-                                    Login
+                                    Shop
                                 </a>
                             </p>
                         </li>
@@ -131,8 +131,8 @@
      
             </div>
         </div>
-        <div class="tab disp-row">
-            <div class="tab disp-row">
+        <div class="tab disp-row social-section">
+            <div class="tab disp-row icons">
                 <div class="social-icons">
                     <a href="#" class="icon disp-flex-row">
                     <i class="fa-brands fa-facebook-f"></i>
@@ -154,10 +154,10 @@
                     </a>
                 </div>
             </div>
-            <div class="tab block-right">
+            <div class="tab sub-tab block-right">
                 <div class="sub-holder">
                 <form action="" class="search-form disp-row sub">
-                <input type="text" placeholder="email.." name="search" class="search-box" id="searchbox">
+                <input type="text" placeholder="email.." name="search" class="search-box subbox" id="searchbox">
                 <button type="submit">
                     Subsrcribe
                     <i class="fa fa-check">

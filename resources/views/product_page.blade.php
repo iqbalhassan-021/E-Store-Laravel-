@@ -14,7 +14,8 @@
 
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
+    <!--Fancybox pop-up-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
     <title></title>
 </head>
 <body>
@@ -71,39 +72,31 @@
                 <div class="size-quality">
                     <div class="size-container">
                         <p class="desc">
-                            Size : 
+                           Available Size : 
+                           
                         </p>
-                        <button class="button">
-                            S
-                        </button>
-                        <button class="button">
-                            M
-                        </button>
-                        <button class="button">
-                            L
-                        </button>
-                        <button class="button">
-                            XL
-                        </button>
+                            <p class="desc">
+                                L
+                            </p>
                     </div>
                     <div class="quality">
                         <p class="desc">
                             Quality : 
                         </p>
 
-                        <button class="button">
+                        <button class="button"  onclick="decrementCounter()">
                             -
                         </button>
-                        <p class="desc" style="margin-left: 10px;">
-                            0
+                        <p class="desc" style="margin-left: 10px;" id="quantity">
+                            1
                         </p>
-                        <button class="button">
+                        <button class="button" onclick="incrementCounter()">
                             +
                         </button>
                     </div>
                 </div>
                 <div class="buy-cart disp-flex-row">
-                         <button class="button button-big">
+                         <button class="button button-big" data-fancybox data-src="#orderPopup">
                             Buy
                         </button> 
                         <button class="button button-big">
@@ -163,5 +156,87 @@
     </div>
 @include('components.related_posts')
 @include('components.footer')
+<div id="orderPopup" style="display: none;">
+    <div class="popup-content">
+         <!-- Product Name -->
+         <p class="desc">
+            Product name    
+        </p>
+                 <!-- Product Name -->
+        <p class="desc">
+            Product Code    
+        </p>
+        
+        <!-- Product Description -->
+        <p class="desc">A torch is a portable handheld device that produces a beam of light, commonly used for illumination in various outdoor and indoor settings</p>
+        
+        <!-- Product Price -->
+        <p class="desc">Price: $19.99</p>
+        <!-- Selected Size -->
+        <p class="desc">L</p>
+        <!-- Selected Size -->
+        <p class="desc" id="_quantity">1</p>
+        <!-- Order Form -->
+        <form id="orderForm">
+            <!-- Address Input -->
+            <input type="text" name="address" placeholder="Enter Address" required class="input-field"><br>
+            
+            <!-- Phone Number Input -->
+            <input type="tel" name="phone" placeholder="Enter Phone Number" required class="input-field"><br>
+
+            <!-- Submit Button -->
+            <button type="submit" class="button button-big">Confirm Order</button>
+        </form>
+    </div>
+</div>
+
+
+<!-- JavaScript -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+<script>
+    // JavaScript for counter functionality
+    let count = 1; // Initialize counter
+
+    function updateCounter() {
+        // Update the text content of the paragraph element with the current count
+        document.getElementById('quantity').innerHTML = count;
+        $('#_quantity').text(count);
+    }
+
+    function incrementCounter() {
+        // Increment the count and update the counter display
+        count++;
+        updateCounter();
+    }
+
+    function decrementCounter() {
+        // Decrement the count (if greater than 1) and update the counter display
+        if (count > 1) {
+            count--;
+        } else {
+            // If count is 1 or less, set it to 1
+            count = 1;
+        }
+        updateCounter();
+    }
+    $(document).ready(function() {
+        // Initialize fancybox
+        $("[data-fancybox]").fancybox({
+            autoFocus: false
+        });
+        
+        // Handle form submission
+        $('#orderForm').submit(function(event) {
+            event.preventDefault();
+            // Add your code to process the order here
+            alert('Order Confirmed!');
+            $.fancybox.close();
+
+        });
+    });
+</script>
+
 </body>
 </html>

@@ -61,6 +61,7 @@
                     </p>
                     <p class="desc">
                         Adidas shoes represent a fusion of iconic design, innovative technology, and unparalleled comfort. Renowned for their sleek aesthetic and performance-driven features, Adidas footwear caters to athletes and fashion enthusiasts alike. With a rich heritage spanning decades, Adidas continues to push boundaries in the realm of sports and lifestyle footwear.
+                        
                     </p>
                     <a href="" class="no-decoration link">
                         Learn more
