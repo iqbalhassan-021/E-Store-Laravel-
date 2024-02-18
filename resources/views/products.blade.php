@@ -19,55 +19,7 @@
     @include('components.header')
     <div class="products">
         <div class="body-cover disp-row">
-            <div class="category-tab">
-                <p class="desc ">
-                    Categories
-                </p>
-                <ul>
-                    <li>
-                        <button class="cat-b">
-                            <p class="desc">
-                                Luxury
-                            </p>
-                        </button>
-                    </li>
-                    <li>
-                        <button class="cat-b">
-                            <p class="desc">
-                            Shirts
-                            </p>
-                        </button>
-                    </li>
-                    <li>
-                        <button class="cat-b">
-                            <p class="desc">
-                            Jackets
-                            </p>
-                        </button>
-                    </li>
-                    <li>
-                        <button class="cat-b">
-                            <p class="desc">
-                            Jeans
-                            </p>
-                        </button>
-                    </li>
-                    <li>
-                        <button class="cat-b">
-                            <p class="desc">
-                            Shoes
-                            </p>
-                        </button>
-                    </li>
-                    <li>
-                        <button class="cat-b">
-                            <p class="desc">
-                            Smart Watchs
-                            </p>
-                        </button>
-                    </li>
-                </ul>
-            </div>
+
             <div class="show-products disp-flex-row">
                 <div class="grid-f3">
                 <div class="card">

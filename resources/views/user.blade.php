@@ -22,14 +22,12 @@
 </head>
 
 <body>
+@include('components.header')
     <div class="admin-panel disp-row">
+        
         <div class="nav-panel">
             <div class="sticky">
-                <p class="tagline">
-                    <strong>
-                        Store Name
-                    </strong>
-                </p>
+
                 <button class="dash-btn" id="dash-btn">
                     <p class="desc">
                         <i class="fa-solid fa-user"></i>
@@ -66,7 +64,7 @@
         </div>
         <div class="setting-panel ">
             <div class="edit-admin">
-                <form action="#" method="post">
+                <form action="#" method="post" class="edit-form">
                     <label for="username">Username:</label><br>
                     <input type="text" id="username" name="username" class="input-field" required><br>
 

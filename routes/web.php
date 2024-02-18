@@ -13,3 +13,4 @@ Route::get('/auth',[Controller::class,'auth']);
 Route::get('/cart',[Controller::class,'cart']);
 Route::get('/user',[Controller::class,'user']);
 Route::get('/admin',[Controller::class,'admin']);
+Route::get('/redirect',[Controller::class,'redirect']);

@@ -95,7 +95,7 @@
                         </form>
                     </div>
                 </div>
-                <div class="col1 disp-flex-col">
+                <div class="col1 vector disp-flex-col">
                     <img src="{{asset('assets/images/mobile_login.png')}}" alt="login here">
                 </div>
             </div>

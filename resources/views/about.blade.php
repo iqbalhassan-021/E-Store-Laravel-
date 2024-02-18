@@ -19,8 +19,12 @@
 <body>
 @include('components.header')
     <div class="about-section">
-        <div class="body-cover  disp-flex-row">
+        <div class="body-cover  ">
+        <div class="mid-section disp-flex-row">
+
+
         <div class="about-us">
+
                 <p class="title ">
                 <strong>
                      About Us
@@ -40,6 +44,7 @@
         <div class="about-img disp-flex-row">
             <img src="{{asset('assets/images/about-hero.svg')}}" alt="about-hero">
         </div>
+    </div>
     </div>
     </div>
     <div class="our-services section">

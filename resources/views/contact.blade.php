@@ -31,6 +31,7 @@
     </div>
     <div class="contact-section">
         <div class="body-cover disp-flex-row">
+          
             <div class="container disp-flex-col">
             <form class="contact-form">
                 <label for="fname" class="desc">First Name</label>

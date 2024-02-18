@@ -21,7 +21,8 @@
 <body>
 @include('components.header')
     <div class="the-product">
-        <div class="body-cover disp-row">
+        <div class="body-cover ">
+            <div class="product-container disp-row">
             <div class="product-visual ">
                 <div class="container">
                     <img src="{{asset('assets/images/feature_prod_01.jpg')}}" alt="Product">
@@ -106,6 +107,7 @@
             </div>
             </div>
         </div>
+    </div>
     </div>
     <div class="comment-section ">
         <div class="body-cover disp-flex-col">

@@ -99,7 +99,7 @@
         </div>
             <div class="setting-panel ">
                 <div class="dashborad">
-                <div class="tab">
+                <div class="tab dash">
                     <div class="welcome disp-flex-row">
                         <div class="info">
                             <p class="title">
@@ -612,6 +612,21 @@ function collapse() {
     }
 }
 
+</script>
+<script>
+    // Check if the screen width is less than a certain threshold
+    function checkScreenWidth() {
+        var screenWidth = window.innerWidth;
+        var desktopWidthThreshold = 1115; // Adjust this threshold as needed
+
+        if (screenWidth < desktopWidthThreshold) {
+            // Redirect the user to a different page
+            window.location.href = "{{url('redirect')}}"; // Change this to the mobile page URL
+        }
+    }
+
+    // Call the function on page load
+    window.onload = checkScreenWidth;
 </script>
 </body>
 </html>
