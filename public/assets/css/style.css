@@ -1355,6 +1355,9 @@ label {
       height: auto;
       width: 100%;
     }
+    .edit-form{
+      width: 50%;
+    }
 /*Tablet*/
 @media screen and (max-width: 781px) {
   /*Landing Page*/

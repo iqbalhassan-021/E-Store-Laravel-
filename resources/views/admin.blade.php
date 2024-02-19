@@ -28,55 +28,55 @@
                     Store Name
                 </strong>
             </p>
-            <button class="dash-btn" id="dash-btn">
+            <button class="dash-btn" id="dash-btn" onclick="showdive('dasboard','editstore','editslides','editadmin','newcatg','editprods','neworders','feedbacks','userstable')" >
                 <p class="desc">
                 <i class="fa-solid fa-gauge"></i>
                  <span class="x-dash-btn" id="x-dash-btn">Dashboard</span>
                 </p>
             </button>
-            <button class="dash-btn"  id="dash-btn">
+            <button class="dash-btn"  id="dash-btn" onclick="showdive('editstore','dasboard','editslides','editadmin','newcatg','editprods','neworders','userstable','feedbacks')">
                 <p class="desc">
                 <i class="fa-solid fa-store"></i>
                 <span class="x-dash-btn " id="x-dash-btn">Edit Store</span>
                 </p>
             </button>
-            <button class="dash-btn"  id="dash-btn">
+            <button class="dash-btn"  id="dash-btn" onclick="showdive('editslides','editstore','dasboard','editadmin','newcatg','editprods','neworders','userstable','feedbacks')">
                 <p class="desc">
                 <i class="fa-brands fa-slideshare"></i>
                 <span class="x-dash-btn" id="x-dash-btn">Slider</span>
                 </p>
             </button>
-            <button class="dash-btn"  id="dash-btn">
+            <button class="dash-btn"  id="dash-btn" onclick="showdive('editadmin','editslides','dasboard','newcatg','editprods','neworders','userstable','feedbacks','editstore')">
                 <p class="desc">
                 <i class="fa-solid fa-user"></i>
                 <span class="x-dash-btn" id="x-dash-btn">Edit Profile</span>
                 </p>
             </button>
-            <button class="dash-btn"  id="dash-btn">
+            <button class="dash-btn"  id="dash-btn" onclick="showdive('newcatg','editadmin','editslides','dasboard','editprods','neworders','userstable','feedbacks','editstore')">
                 <p class="desc">
                 <i class="fa-solid fa-list"></i>
                 <span class="x-dash-btn" id="x-dash-btn">Categories</span>
                 </p>
             </button>
-            <button class="dash-btn"  id="dash-btn">
+            <button class="dash-btn"  id="dash-btn" onclick="showdive('editprods','newcatg','editadmin','editslides','dasboard','neworders','userstable','feedbacks','editstore')">
                 <p class="desc">
                 <i class="fa-brands fa-product-hunt"></i>
                 <span class="x-dash-btn">Products</span>
                 </p>
             </button>
-            <button class="dash-btn"  id="dash-btn">
+            <button class="dash-btn"  id="dash-btn" onclick="showdive('neworders','editprods','newcatg','editadmin','editslides','dasboard','userstable','feedbacks','editstore')">
                 <p class="desc">
                 <i class="fa-solid fa-border-all"></i>
-                <span class="x-dash-btn" id="x-dash-btn">New Orders</span>
+                <span class="x-dash-btn" id="x-dash-btn" >New Orders</span>
                 </p>
             </button>
-            <button class="dash-btn"  id="dash-btn">
+            <button class="dash-btn"  id="dash-btn" onclick="showdive('userstable','neworders','editprods','newcatg','editadmin','editslides','dasboard','feedbacks','editstore')">
                 <p class="desc">
                 <i class="fa-solid fa-user"></i>
                 <span class="x-dash-btn" id="x-dash-btn">Users</span>
                 </p>
             </button>
-            <button class="dash-btn"  id="dash-btn">
+            <button class="dash-btn"  id="dash-btn" onclick="showdive('feedbacks','userstable','neworders','editprods','newcatg','editadmin','editslides','dasboard','editstore')">
                 <p class="desc">
                 <i class="fa-solid fa-comment"></i>
                 <span class="x-dash-btn" id="x-dash-btn">Feedbacks</span>
@@ -89,16 +89,11 @@
                 <span class="x-dash-btn" id="x-dash-btn">Home</span>
                 </p>
             </button>
-            <button class="dash-btn collapse" id="collapse" onclick="collapse()">
-                <p class="desc">
-                <i class="fa-solid fa-circle-chevron-up fa-rotate-270"></i>
-                <span class="x-dash-btn" id="x-dash-btn">collapse</span>
-                </p>
-            </button>
+
             </div>
         </div>
             <div class="setting-panel ">
-                <div class="dashborad">
+                <div class="dashborad" id="dasboard">
                 <div class="tab dash">
                     <div class="welcome disp-flex-row">
                         <div class="info">
@@ -171,7 +166,7 @@
                     </div>
                 </div>
             </div>
-            <div class="edit-store">
+            <div class="edit-store" id="editstore">
             <form action="#" method="post" class="edit-store-form">
         <label for="storeName">Store Name:</label><br>
         <input type="text" id="storeName" name="storeName" class="input-field" required><br>
@@ -201,7 +196,7 @@
         <input type="submit" value="Submit" class="submit-btn">
     </form>
             </div>
-            <div class="edit-slides">
+            <div class="edit-slides" id="editslides">
             <form action="#" method="post">
         <!-- Slide 1 -->
         <label for="slideTitle1">Slide 1 Title:</label><br>
@@ -254,7 +249,7 @@
         <input type="submit" value="Submit" class="submit-btn">
     </form>
             </div>
-            <div class="edit-admin">
+            <div class="edit-admin" id="editadmin">
             <form action="#" method="post">
         <label for="username">Username:</label><br>
         <input type="text" id="username" name="username" class="input-field" required><br>
@@ -271,7 +266,7 @@
     </form>
 
             </div>
-            <div class="new-categories">
+            <div class="new-categories" id="newcatg">
             <table class="all-user">
         <thead>
             <tr>
@@ -324,7 +319,7 @@
             <!-- Add more rows as needed -->
 
             </div>
-            <div class="edit-products">
+            <div class="edit-products" id="editprods">
             <table class="all-user">
         <thead>
             <tr>
@@ -411,7 +406,7 @@
         <input type="submit" value="Add Product" class="submit-btn">
     </form>
             </div>
-            <div class="new-orders">
+            <div class="new-orders" id="neworders">
                 <table  class="all-user">
             <thead>
             <tr>
@@ -516,7 +511,7 @@
         </tbody>
     </table>
             </div>
-            <div class="all-userstable">
+            <div class="all-userstable" id="userstable">
             <table class="all-user">
         <thead>
             <tr>
@@ -556,7 +551,7 @@
         </tbody>
     </table>
             </div>
-            <div class="all-feedbacks">
+            <div class="all-feedbacks" id="feedbacks">
             <table class="all-user">
         <thead>
             <tr>
@@ -627,6 +622,21 @@ function collapse() {
 
     // Call the function on page load
     window.onload = checkScreenWidth;
+</script>
+<script>
+    function showdive(div1,div2,div3,div4,div5,div6,div7,div8,div9){
+        //The div to be displayed
+        document.getElementById(div1).style.display = "block";
+        //The div to be hidden
+        document.getElementById(div2).style.display = "none";
+        document.getElementById(div3).style.display = "none";
+        document.getElementById(div4).style.display = "none";
+        document.getElementById(div5).style.display = "none";
+        document.getElementById(div6).style.display = "none";
+        document.getElementById(div7).style.display = "none";
+        document.getElementById(div8).style.display = "none";
+        document.getElementById(div9).style.display = "none";
+    }
 </script>
 </body>
 </html>

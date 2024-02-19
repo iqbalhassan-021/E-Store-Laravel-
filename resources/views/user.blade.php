@@ -28,13 +28,13 @@
         <div class="nav-panel">
             <div class="sticky">
 
-                <button class="dash-btn" id="dash-btn">
+                <button class="dash-btn" id="dash-btn" onclick="showdive('editadmin','progress')">
                     <p class="desc">
                         <i class="fa-solid fa-user"></i>
                         <span class="x-dash-btn" id="x-dash-btn">Edit Profile</span>
                     </p>
                 </button>
-                <button class="dash-btn" id="dash-btn">
+                <button class="dash-btn" id="dash-btn" onclick="showdive('progress','editadmin')">
                     <p class="desc">
                         <i class="fa-brands fa-product-hunt"></i>
                         <span class="x-dash-btn">Progress</span>
@@ -54,16 +54,11 @@
                         <span class="x-dash-btn" id="x-dash-btn">Home</span>
                     </p>
                 </button>
-                <button class="dash-btn collapse" id="collapse" onclick="collapse()">
-                    <p class="desc">
-                        <i class="fa-solid fa-circle-chevron-up fa-rotate-270"></i>
-                        <span class="x-dash-btn" id="x-dash-btn">collapse</span>
-                    </p>
-                </button>
+
             </div>
         </div>
         <div class="setting-panel ">
-            <div class="edit-admin">
+            <div class="edit-admin" id="editadmin">
                 <form action="#" method="post" class="edit-form">
                     <label for="username">Username:</label><br>
                     <input type="text" id="username" name="username" class="input-field" required><br>
@@ -80,7 +75,7 @@
                 </form>
 
             </div>
-            <div class="progress">
+            <div class="progress" id="progress">
                 
                 <table class="all-user">
                     <thead>
@@ -107,7 +102,14 @@
             </div>
         </div>
     </div>
-
+<script>
+    function showdive(div1,div2){
+        //The div to be displayed
+        document.getElementById(div1).style.display = "flex";
+        //The div to be hidden
+        document.getElementById(div2).style.display = "none";
+    }
+</script>
 </body>
 
 </html>
