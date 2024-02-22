@@ -381,9 +381,10 @@
             <!-- Add more rows as needed -->
         </tbody>
     </table>
-    <form action="#" method="post">
+    <form action="the_products" method="post" enctype="multipart/form-data">
+    @csrf <!-- CSRF protection -->
         <label for="productImage">Product Image:</label><br>
-        <input type="file" id="productImage" name="productImage" class="input-field" accept="image/*" required><br>
+        <input type="file" id="productImage" name="productImage" class="input-field" accept="image/png, image/jpeg" required><br>
         
         <label for="productName">Product Name:</label><br>
         <input type="text" id="productName" name="productName" class="input-field" required><br>

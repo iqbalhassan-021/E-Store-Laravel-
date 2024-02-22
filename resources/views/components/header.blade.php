@@ -14,28 +14,28 @@
     <div class="body-cover disp-flex-col">
        <div class="navbar disp-flex-row" id="navbar">
             <div class="logoholder disp-flex-row" id="logoholder">
-                <a href="#" class="logo no-decoration" >
+                <a href="/" class="logo no-decoration" >
                     E Store
                 </a>
             </div>
             <div class="pages disp-flex-row" id="pages">
                 <div class="page-holder disp-flex-row">
-                    <a href="#" class="no-decoration">
+                    <a href="/" class="no-decoration">
                         HOME
                     </a>
                 </div>
                 <div class="page-holder disp-flex-row">
-                    <a href="#" class="no-decoration">
+                    <a href="/about" class="no-decoration">
                         ABOUT
                     </a>
                 </div>
                 <div class="page-holder disp-flex-row">
-                    <a href="#" class="no-decoration">
+                    <a href="products" class="no-decoration">
                         SHOP
                     </a>
                 </div>
                 <div class="page-holder disp-flex-row">
-                    <a href="#" class="no-decoration">
+                    <a href="contact" class="no-decoration">
                         CONTACT
                     </a>
                 </div>
@@ -46,12 +46,12 @@
                 <input type="text" placeholder="Search.." name="search" class="search-box" id="searchbox">
                 <button type="submit"><i class="fa fa-search"></i></button>
             </form>
-                <a href="#" class=" disp-flex-row">
+                <a href="cart" class=" disp-flex-row">
                     <i class="fa fa-cart-shopping " id="prodcutcount">
                         0
                     </i>
                 </a>
-                <a href="#" class=" disp-flex-row">
+                <a href="auth" class=" disp-flex-row">
                     <i class="fa fa-fw fa-user">
                     </i>
                 </a>

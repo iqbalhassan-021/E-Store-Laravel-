@@ -36,8 +36,8 @@
                                 </p>
                             </button>
                         </div>
-                        <form class="login-form disp-flex-col" id="login_form">
-                            
+                        <form class="login-form disp-flex-col" id="login_form" method="POST" action="login">
+                        @csrf <!-- CSRF protection -->
                             <label for="username" class="desc left">Username</label>
                             <input required class="input-field login-input desc" type="text" id="username" name="username" placeholder="username">
                             <label for="password" class="desc left">Password</label>
@@ -56,13 +56,15 @@
                             </div>
                             <span class="">
                                 <p class="desc warning">
-                      
+                                    @if (session('error'))
+                                        {{ session('error') }}
+                                    @endif
                                 </p>
                             </span>
                             <input type="submit" class="login desc" value="Login">
                         </form>
-                        <form class="signup-form disp-flex-col" id="signup_form">
-                            
+                        <form class="signup-form disp-flex-col" id="signup_form" method="POST" action="signup">
+                        @csrf <!-- CSRF protection -->
                             <label for="name" class="desc left">Name</label>
                             <input required class="input-field login-input desc" type="text" id="name" name="name" placeholder="Full Name">
                             <label for="username" class="desc left">Username</label>
@@ -73,12 +75,15 @@
                             <input required class="input-field login-input desc" type="text" id="securityquestion" name="securityquestion" placeholder="Your last pet was a?">
                             <span class="">
                                 <p class="desc warning">
-                           
+                                @if (session('error'))
+                                        {{ session('error') }}
+                                    @endif
                                 </p>
                             </span>
                             <input type="submit" class="login desc" value="Signup">
                         </form>
                         <form class="resetpass-form disp-flex-col" id="resetpass">
+                        @csrf <!-- CSRF protection -->
                         <label for="username" class="desc left">Username</label>
                             <input required class="input-field login-input desc" type="text" id="username" name="username" placeholder="username">
                           
@@ -88,7 +93,9 @@
                             <input required class="input-field login-input desc" type="password" id="password" name="password" placeholder="Set a password">
                             <span class="">
                                 <p class="desc warning">
-                        
+                                @if (session('error'))
+                                        {{ session('error') }}
+                                    @endif
                                 </p>
                             </span>
                             <input type="submit" class="login desc" value="Signup">
