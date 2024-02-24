@@ -19,3 +19,4 @@ Route::get('/redirect',[Controller::class,'redirect']);
 Route::post('signup',[auth_controller::class,'signup']);
 Route::post('login',[auth_controller::class,'login']);
 Route::post('the_products',[product_controller::class,'the_products']);
+Route::get('delete/{id}',[product_controller::class,'delete']);

@@ -20,7 +20,6 @@
 <body>
 
 <div class="admin-panel disp-row">
-
         <div class="nav-panel">
             <div class="sticky">
             <p class="tagline">
@@ -143,9 +142,9 @@
                                 <i class="fa-brands fa-product-hunt"></i>
                                 </p>
                                 <p class="desc">
-                                All Products
+                                Products : 
                                 <span class="x-dash-btn">
-                                <?php echo'0';?>
+                                <td>{{$products_count}}</td>
                                 </span>
                                 </p>
                                
@@ -327,7 +326,7 @@
                 <th>Product Image</th>
                 <th>Product Name</th>
                 <th>Product Price</th>
-                <th>Product Code</th>
+                <th>Product ID</th>
                 <th>Product Description</th>
                 <th>Category</th>
                 <th>Size</th>
@@ -335,50 +334,23 @@
             </tr>
         </thead>
         <tbody>
-            <!-- Sample row, replace with dynamic data -->
+            @foreach($products as $data)
             <tr>
-                <td>#1</td>
-                <td><img src="{{asset('assets/images/category_img_03.jpg')}}" alt="Product 1"></td>
-                <td>Product 1</td>
-                <td>$10.00</td>
-                <td>P001</td>
-                <td>Description of Product 1</td>
-                <td>Glasses</td>
-                <td>L</td>
+                <td>{{$srnum++}}</td>
+                <td><img src="{{$data->productImage}}" alt="Product"></td>
+                <td>{{$data->productName}}</td>
+                <td>{{$data->productPrice}}</td>
+                <td>{{$data->id}}</td>
+                <td>{{$data->productDescription}}</td>
+                <td>{{$data->productCategory}}</td>
+                <td>{{$data->productsize}}</td>
                 <td>
-                <button class="submit-btn ">Edit</button>
-                   <button class="submit-btn warning">Remove</button>
+                <a href=""><button class="submit-btn ">Edit</button></a>
+                <a href="{{url('delete/'.$data->id)}}"><button class="submit-btn warning">Remove</button></a>
                 </td>
             </tr>
-            <tr>
-                <td>#1</td>
-                <td><img src="{{asset('assets/images/category_img_03.jpg')}}" alt="Product 1"></td>
-                <td>Product 1</td>
-                <td>$10.00</td>
-                <td>P001</td>
-                <td>Description of Product 1</td>
-                <td>Glasses</td>
-                <td>L</td>
-                <td>
-                <button class="submit-btn ">Edit</button>
-                   <button class="submit-btn warning">Remove</button>
-                </td>
-            </tr>
-            <tr>
-                <td>#1</td>
-                <td><img src="{{asset('assets/images/category_img_03.jpg')}}" alt="Product 1"></td>
-                <td>Product 1</td>
-                <td>$10.00</td>
-                <td>P001</td>
-                <td>Description of Product 1</td>
-                <td>Glasses</td>
-                <td>L</td>
-                <td>
-                <button class="submit-btn ">Edit</button>
-                   <button class="submit-btn warning">Remove</button>
-                </td>
-            </tr>
-            <!-- Add more rows as needed -->
+            @endforeach
+
         </tbody>
     </table>
     <form action="the_products" method="post" enctype="multipart/form-data">
@@ -392,8 +364,8 @@
         <label for="productPrice">Product Price:</label><br>
         <input type="number" id="productPrice" name="productPrice" class="input-field" min="0" required><br>
         
-        <label for="productCode">Product Code:</label><br>
-        <input type="text" id="productCode" name="productCode" class="input-field" required><br>
+        <label for="id">Product ID:</label><br>
+        <input type="text" id="id" name="id" class="input-field" required><br>
         
         <label for="productDescription">Product Description:</label><br>
         <textarea id="productDescription" name="productDescription" class="input-field" required></textarea><br>

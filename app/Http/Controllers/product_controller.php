@@ -21,12 +21,17 @@ class product_controller extends Controller
         $product -> productImage = $filename;
         $product -> productName = $request -> productName;
         $product -> productPrice = $request -> productPrice;
-        $product -> productCode = $request -> productCode;
+        $product -> id = $request -> id;
         $product -> productDescription = $request -> productDescription;
         $product -> productCategory = $request -> productCategory;
         $product -> productsize = $request -> productsize;
         $product->save();
-        return view('/admin');
+        return view('home');
     }
 
+    function delete($id){
+        $data = products::find($id);
+        $data->delete();
+        return view('home');
+    }
 }
