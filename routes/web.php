@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\auth_controller;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\product_categories;
 use App\Http\Controllers\product_controller;
 use Illuminate\Support\Facades\Route;
 
@@ -20,3 +21,5 @@ Route::post('signup',[auth_controller::class,'signup']);
 Route::post('login',[auth_controller::class,'login']);
 Route::post('the_products',[product_controller::class,'the_products']);
 Route::get('delete/{id}',[product_controller::class,'delete']);
+Route::post('the_categories',[product_categories::class,'the_categories']);
+Route::get('delete/{id}',[product_categories::class,'delete']);

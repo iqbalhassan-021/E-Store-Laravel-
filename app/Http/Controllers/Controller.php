@@ -40,15 +40,17 @@ class Controller extends BaseController
         $srnum = 1;
         // Retrieve data from the database
         $products = DB::table('products')->get();
-    
+        $categories = DB::table('categories')->get();
         // Get the row count
         $products_count = $products->count();
-        
+        $categories_count = $categories->count();
         // Pass variables to the view using compact()
         return view('admin', [
             'srnum' => $srnum,
             'products' => $products,
-            'products_count' => $products_count
+            'categories' => $categories,
+            'products_count' => $products_count,
+            'categories_count' => $categories_count
         ]);
     }
     public function redirect(){
