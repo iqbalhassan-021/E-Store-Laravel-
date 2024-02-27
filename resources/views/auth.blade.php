@@ -69,6 +69,10 @@
                             <input required class="input-field login-input desc" type="text" id="name" name="name" placeholder="Full Name">
                             <label for="username" class="desc left">Username</label>
                             <input required class="input-field login-input desc" type="username" id="username" name="username" placeholder="Enter a username">
+                            <label for="email" class="desc left">Email or Phone number</label>
+                            <input required class="input-field login-input desc" type="email" id="email" name="email" placeholder="Enter a email of phone numer">
+                            <label for="address" class="desc left">Address</label>
+                            <input required class="input-field login-input desc" type="address" id="address" name="address" placeholder="Enter your address ">
                             <label for="password" class="desc left">Password</label>
                             <input required class="input-field login-input desc" type="password" id="password" name="password" placeholder="Set a password">
                             <label for="securityquestion" class="desc left">Seacurity Quesntion</label>

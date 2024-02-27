@@ -19,6 +19,8 @@ class auth_controller extends Controller
         $person = new person();
         $person->username = $request->username;
         $person->name = $request->name;
+        $person->email = $request->email;
+        $person->address = $request->address;
         $person->password = $request->password;
         $person->securityquestion = $request->securityquestion;
         $person->save();

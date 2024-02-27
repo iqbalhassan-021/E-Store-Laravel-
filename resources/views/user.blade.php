@@ -47,14 +47,14 @@
                         <span class="x-dash-btn" id="x-dash-btn">Cart</span>
                     </p>
                 </button>
-
+                <a href="/">
                 <button class="dash-btn" id="dash-btn">
                     <p class="desc">
                         <i class="fa-solid fa-arrow-left"></i>
                         <span class="x-dash-btn" id="x-dash-btn">Home</span>
                     </p>
                 </button>
-
+                </a>
             </div>
         </div>
         <div class="setting-panel ">
@@ -102,6 +102,7 @@
             </div>
         </div>
     </div>
+    @include('components.footer')
 <script>
     function showdive(div1,div2){
         //The div to be displayed

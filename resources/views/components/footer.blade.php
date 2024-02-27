@@ -44,48 +44,15 @@
                     </h2>
                     <hr style="width:100%;text-align:left;margin-left:0">
                     <ul>
+                        @foreach($producttype as $type)
                         <li>
                             <p class="desc">
                                 <a href="#" class="no-decoration">
-                                Luxury
+                                 {{$type->categoryName}}
                                 </a>
                             </p>
                         </li>
-                        <li>
-                            <p class="desc">
-                                <a href="#" class="no-decoration">
-                                    Shirts
-                                </a>
-                            </p>
-                        </li>
-                        <li>
-                            <p class="desc">
-                                <a href="#" class="no-decoration">
-                                    Jackets
-                                </a>
-                            </p>
-                        </li>
-                        <li>
-                            <p class="desc">
-                                <a href="#" class="no-decoration">
-                                    Jeans
-                                </a>
-                            </p>
-                        </li>
-                        <li>
-                            <p class="desc">
-                                <a href="#" class="no-decoration">
-                                    Shoes
-                                </a>
-                            </p>
-                        </li>
-                        <li>
-                            <p class="desc">
-                                <a href="#" class="no-decoration">
-                                    Smart Watchs
-                                </a>
-                            </p>
-                        </li>
+                        @endforeach
                     </ul>
                 </div>
      

@@ -15,7 +15,9 @@
        <div class="navbar disp-flex-row" id="navbar">
             <div class="logoholder disp-flex-row" id="logoholder">
                 <a href="/" class="logo no-decoration" >
-                    E Store
+                @foreach($store as $predetails)
+                    {{$predetails->storeName}}
+                @endforeach
                 </a>
             </div>
             <div class="pages disp-flex-row" id="pages">

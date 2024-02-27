@@ -81,14 +81,14 @@
                 <span class="x-dash-btn" id="x-dash-btn">Feedbacks</span>
                 </p>
             </button>
-
+<a href="/">
             <button class="dash-btn"  id="dash-btn">
                 <p class="desc">
                 <i class="fa-solid fa-arrow-left"></i>
                 <span class="x-dash-btn" id="x-dash-btn">Home</span>
                 </p>
             </button>
-
+            </a>
             </div>
         </div>
             <div class="setting-panel ">
@@ -166,10 +166,69 @@
                 </div>
             </div>
             <div class="edit-store" id="editstore">
+                <table class="all-user">
+                    <tr>
+                        <th>
+                        Store Name
+                        </th>
+                        <th>
+                        Facebook Link
+                        </th>
+                        <th>
+                        Instagram Link
+                        </th>
+                        <th>
+                        Whatsapp Link
+                        </th>
+                        <th>
+                        Linkedin Link
+                        </th>
+                        <th>
+                        Store Address
+                        </th>
+                        <th>
+                        Store Phone
+                        </th>
+                        <th>
+                        Store Email
+                        </th>
+                    </tr>
+                    @foreach($storedetails as $details)
+                        <tr>
+                        <td>
+                        {{$details->storeName}}
+                        </td>
+                        <td>
+                        {{$details->facebookLink}}
+                        </td>
+                        <td>
+                        {{$details->instagramLink}}
+                        </td>
+                        <td>
+                        {{$details->whatsappLink}}
+                        </td>
+                        <td>
+                        {{$details->linkedinLink}}
+                        </td>
+                        <td>
+                        {{$details->storeAddress}}
+                        </td>
+                        <td>
+                        {{$details->storePhone}}
+                        </td>
+                        <td>
+                        {{$details->storeEmail}}
+                        </td>
+                        </tr>
+                    @endforeach
+                </table>
+                <h1 class="title">
+                    Edit the store
+                </h1>
             <form action="store_details" method="post" class="edit-store-form">
             @csrf <!-- CSRF protection -->
         <label for="storeName">Store Name:</label><br>
-        <input type="text" id="storeName" name="storeName" class="input-field" required><br>
+        <input type="text" id="storeName" name="storeName" class="input-field" required value=""><br>
         
         
         <label for="facebookLink">Facebook Link:</label><br>
@@ -478,32 +537,14 @@
             </tr>
         </thead>
         <tbody>
-            <!-- Sample row, replace with dynamic data -->
+            @foreach($users as $user)
             <tr>
-                <td>John Doe</td>
-                <td>johndoe123</td>
-                <td>john@example.com</td>
-                <td>123 Main St, City, Country</td>
+                <td>{{$user->name}}</td>
+                <td>{{$user->username}}</td>
+                <td>{{$user->email}}</td>
+                <td>{{$user->address}}</td>
             </tr>
-            <tr>
-                <td>John Doe</td>
-                <td>johndoe123</td>
-                <td>john@example.com</td>
-                <td>123 Main St, City, Country</td>
-            </tr>
-            <tr>
-                <td>John Doe</td>
-                <td>johndoe123</td>
-                <td>john@example.com</td>
-                <td>123 Main St, City, Country</td>
-            </tr>
-            <tr>
-                <td>John Doe</td>
-                <td>johndoe123</td>
-                <td>john@example.com</td>
-                <td>123 Main St, City, Country</td>
-            </tr>
-            <!-- Add more rows as needed -->
+            @endforeach
         </tbody>
     </table>
             </div>

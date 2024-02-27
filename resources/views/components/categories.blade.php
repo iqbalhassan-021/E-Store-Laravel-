@@ -10,51 +10,23 @@
             </p>
             <div class="categories-wrapper disp-flex-row">
                 <div class="categories-grid">
+                    @foreach($producttype as $type)
                     <div class="categories-card disp-flex-col">
                         <a href="#">
-                            <img src="{{asset('assets/images/category_img_01.jpg')}}" alt="category_img_01" class="cat-img">
+                            <img src="{{$type->categoryImage}}" alt="category_img_01" class="cat-img">
                         </a>
                         <br>
                         <p class="tagline">
-                            Watchs
+                        {{$type->categoryName}}
                         </p>  
                         <br>
-                        <a href="#" class="go shop no-decoration">
+                        <a href="/" class="go shop no-decoration">
                             <p class="">
                                 See Products
                             </p>
                         </a>      
                     </div>
-                    <div class="categories-card disp-flex-col">
-                        <a href="#">
-                            <img src="{{asset('assets/images/category_img_02.jpg')}}" alt="category_img_01" class="cat-img">
-                        </a>
-                        <br>
-                        <p class="tagline">
-                            Footware
-                        </p>  
-                        <br>
-                        <a href="#" class="go shop no-decoration">
-                            <p class="">
-                            See Products
-                            </p>
-                        </a>      
-                    </div>
-                    <div class="categories-card disp-flex-col">
-                        <a href="#">
-                            <img src="{{asset('assets/images/category_img_03.jpg')}}" alt="category_img_01" class="cat-img">
-                        </a>
-                        <br>
-                        <p class="tagline">
-                            Glasses
-                        </p>  
-                        <br>
-                        <a href="#" class="go shop no-decoration">
-                            <p class="">
-                            See Products
-                            </p>
-                        </a>      
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
