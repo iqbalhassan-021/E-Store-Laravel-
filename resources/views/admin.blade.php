@@ -120,7 +120,7 @@
                                 <p class="desc">
                                 Users
                                 <span class="x-dash-btn">
-                                <?php echo'0';?>
+                                {{$user_count}}
                                 </span>
                                 </p>
                                
@@ -166,31 +166,32 @@
                 </div>
             </div>
             <div class="edit-store" id="editstore">
-            <form action="#" method="post" class="edit-store-form">
+            <form action="store_details" method="post" class="edit-store-form">
+            @csrf <!-- CSRF protection -->
         <label for="storeName">Store Name:</label><br>
         <input type="text" id="storeName" name="storeName" class="input-field" required><br>
         
         
         <label for="facebookLink">Facebook Link:</label><br>
-        <input type="url" id="facebookLink" name="facebookLink" class="input-field"><br>
+        <input type="text" id="facebookLink" name="facebookLink" class="input-field" required><br>
         
         <label for="instagramLink">Instagram Link:</label><br>
-        <input type="url" id="instagramLink" name="instagramLink" class="input-field"><br>
+        <input type="text" id="instagramLink" name="instagramLink" class="input-field" required><br>
         
         <label for="whatsappLink">WhatsApp Link:</label><br>
-        <input type="url" id="whatsappLink" name="whatsappLink" class="input-field"><br>
+        <input type="text" id="whatsappLink" name="whatsappLink" class="input-field" required><br>
         
         <label for="linkedinLink">LinkedIn Link:</label><br>
-        <input type="url" id="linkedinLink" name="linkedinLink" class="input-field"><br>
+        <input type="text" id="linkedinLink" name="linkedinLink" class="input-field" required><br>
         
         <label for="storeAddress">Store Address:</label><br>
         <textarea id="storeAddress" name="storeAddress" class="input-field" required></textarea><br>
         
         <label for="storePhone">Store Phone Number:</label><br>
-        <input type="tel" id="storePhone" name="storePhone" class="input-field" required><br>
+        <input type="text" id="storePhone" name="storePhone" class="input-field" required><br>
         
         <label for="storeEmail">Store Email:</label><br>
-        <input type="email" id="storeEmail" name="storeEmail" class="input-field" required><br>
+        <input type="text" id="storeEmail" name="storeEmail" class="input-field" required><br>
         
         <input type="submit" value="Submit" class="submit-btn">
     </form>
@@ -199,35 +200,41 @@
             <table class="all-user">
         <thead>
             <tr>
+
                 <th>Product Name</th>
                 <th>Product Code</th>
                 <th>Product Description</th>
                 <th>Product Image</th>
                 <th>Action</th>
+            
             </tr>
         </thead>
         <tbody>
-            <!-- Sample row, replace with dynamic data -->
+        @foreach($slider as $slides)
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+
+                <td>{{$slides->slideproductName}}</td>
+                <td>{{$slides->id}}</td>
+                <td>{{$slides->slideproductDesc}}</td>
                 <td>
-                <a href=""><button class="submit-btn warning">Remove</button></a>
+                <img src="{{$slides->slideproductIMG}}" alt="{{$slides->slideproductName}}">
+                </td>
+                <td>
+                <a href="{{url('delete/'.$slides->id)}}"><button class="submit-btn warning">Remove</button></a>
                 </td>
             </tr>
+            @endforeach
 
-            <!-- Add more rows as needed -->
         </tbody>
     </table>
-            <form action="#" method="post" enctype="multipart/form-data">
+            <form action="the_slider" method="post" enctype="multipart/form-data">
             @csrf <!-- CSRF protection -->
                 <label for="slideproductName">Product Name:</label><br>
                 <input type="text" id="slideproductName" name="slideproductName" class="input-field" required><br>
-                
-                <label for="slideproductCode">Product Code:</label><br>
-                <input type="text" id="slideproductCode" name="slideproductCode" class="input-field" required><br>
+              
+
+                <label for="id">Product Code:</label><br>
+                <input type="text" id="id" name="id" class="input-field" required><br>
                 
                 <label for="slideproductDesc">Product Description:</label><br>
                 <textarea id="slideproductDesc" name="slideproductDesc" class="input-field"  required></textarea><br>
