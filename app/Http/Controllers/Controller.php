@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\person;
 use App\Models\products;
-use GuzzleHttp\Psr7\Request;
+use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\DB;
+
 
 class Controller extends BaseController
 {
@@ -63,6 +64,22 @@ class Controller extends BaseController
             'feauredproducts'=> $feauredproducts,
             'store'=> $store,
             'product' => $product
+        ]);
+    }
+    public function search(Request $request) {
+
+        $producttype = DB::table('categories')->get();
+        $store = DB::table('storedetails')->get();
+        $feauredproducts = DB::table('products')->take(3)->get();
+        $searchValue = $request->search;
+         // Search for products by name in the database
+        $searchResults = DB::table('products')->where('productName', 'like', '%' . $searchValue . '%')->get();
+
+        return view('search',[
+            'producttype'=>$producttype,
+            'feauredproducts'=> $feauredproducts,
+            'store'=> $store,
+            'searchResults' => $searchResults
         ]);
     }
     public function auth(){

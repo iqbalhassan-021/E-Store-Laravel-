@@ -43,7 +43,7 @@
 
             </div>
             <div class="search-cart disp-flex-row">
-            <form action="" class="search-form disp-flex-row">
+            <form action="search" class="search-form disp-flex-row" method="GET">
                 <input type="text" placeholder="Search.." name="search" class="search-box" id="searchbox">
                 <button type="submit"><i class="fa fa-search"></i></button>
             </form>
@@ -67,10 +67,10 @@
        </div>
        <div class="mobile-nav " id="mobilenav">
 
-       <form action="" class="search-form disp-flex-row mbl-search-from">
-                        <input type="text" placeholder="Search.." name="search" class="search-box" id="searchbox">
-                        <button type="submit"><i class="fa fa-search"></i></button>
-                    </form>
+                         <form action="search" class="search-form disp-flex-row mbl-search-from">
+                            <input type="text" placeholder="Search.." name="search" class="search-box" id="searchbox">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
                     <a href="#" class="no-decoration">
                          <p class="desc">HOME</p>
                     </a>
