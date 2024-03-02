@@ -24,58 +24,70 @@
             <div class="sticky">
             <p class="tagline">
                 <strong>
-                    Store Name
+                {{ $store->last()->storeName}}
                 </strong>
             </p>
-            <button class="dash-btn" id="dash-btn" onclick="showdive('dasboard','editstore','editslides','editadmin','newcatg','editprods','neworders','feedbacks','userstable')" >
+            <button class="dash-btn" id="dash-btn" onclick="showdive('dasboard','editstore','editslides','editadmin','newcatg','editprods','neworders','feedbacks','userstable','subscribers','queries')" >
                 <p class="desc">
                 <i class="fa-solid fa-gauge"></i>
                  <span class="x-dash-btn" id="x-dash-btn">Dashboard</span>
                 </p>
             </button>
-            <button class="dash-btn"  id="dash-btn" onclick="showdive('editstore','dasboard','editslides','editadmin','newcatg','editprods','neworders','userstable','feedbacks')">
+            <button class="dash-btn"  id="dash-btn" onclick="showdive('editstore','dasboard','editslides','editadmin','newcatg','editprods','neworders','userstable','feedbacks','subscribers','queries')">
                 <p class="desc">
                 <i class="fa-solid fa-store"></i>
                 <span class="x-dash-btn " id="x-dash-btn">Edit Store</span>
                 </p>
             </button>
-            <button class="dash-btn"  id="dash-btn" onclick="showdive('editslides','editstore','dasboard','editadmin','newcatg','editprods','neworders','userstable','feedbacks')">
+            <button class="dash-btn"  id="dash-btn" onclick="showdive('editslides','editstore','dasboard','editadmin','newcatg','editprods','neworders','userstable','feedbacks','subscribers','queries')">
                 <p class="desc">
                 <i class="fa-brands fa-slideshare"></i>
                 <span class="x-dash-btn" id="x-dash-btn">Slider</span>
                 </p>
             </button>
-            <button class="dash-btn"  id="dash-btn" onclick="showdive('editadmin','editslides','dasboard','newcatg','editprods','neworders','userstable','feedbacks','editstore')">
+            <button class="dash-btn"  id="dash-btn" onclick="showdive('editadmin','editslides','dasboard','newcatg','editprods','neworders','userstable','feedbacks','editstore','subscribers','queries')">
                 <p class="desc">
                 <i class="fa-solid fa-user"></i>
                 <span class="x-dash-btn" id="x-dash-btn">Edit Profile</span>
                 </p>
             </button>
-            <button class="dash-btn"  id="dash-btn" onclick="showdive('newcatg','editadmin','editslides','dasboard','editprods','neworders','userstable','feedbacks','editstore')">
+            <button class="dash-btn"  id="dash-btn" onclick="showdive('newcatg','editadmin','editslides','dasboard','editprods','neworders','userstable','feedbacks','editstore','subscribers','queries')">
                 <p class="desc">
                 <i class="fa-solid fa-list"></i>
                 <span class="x-dash-btn" id="x-dash-btn">Categories</span>
                 </p>
             </button>
-            <button class="dash-btn"  id="dash-btn" onclick="showdive('editprods','newcatg','editadmin','editslides','dasboard','neworders','userstable','feedbacks','editstore')">
+            <button class="dash-btn"  id="dash-btn" onclick="showdive('editprods','newcatg','editadmin','editslides','dasboard','neworders','userstable','feedbacks','editstore','subscribers','queries')">
                 <p class="desc">
                 <i class="fa-brands fa-product-hunt"></i>
                 <span class="x-dash-btn">Products</span>
                 </p>
             </button>
-            <button class="dash-btn"  id="dash-btn" onclick="showdive('neworders','editprods','newcatg','editadmin','editslides','dasboard','userstable','feedbacks','editstore')">
+            <button class="dash-btn"  id="dash-btn" onclick="showdive('neworders','editprods','newcatg','editadmin','editslides','dasboard','userstable','feedbacks','editstore','subscribers','queries')">
                 <p class="desc">
                 <i class="fa-solid fa-border-all"></i>
                 <span class="x-dash-btn" id="x-dash-btn" >New Orders</span>
                 </p>
             </button>
-            <button class="dash-btn"  id="dash-btn" onclick="showdive('userstable','neworders','editprods','newcatg','editadmin','editslides','dasboard','feedbacks','editstore')">
+            <button class="dash-btn"  id="dash-btn" onclick="showdive('userstable','neworders','editprods','newcatg','editadmin','editslides','dasboard','feedbacks','editstore','subscribers','queries')">
                 <p class="desc">
                 <i class="fa-solid fa-user"></i>
                 <span class="x-dash-btn" id="x-dash-btn">Users</span>
                 </p>
             </button>
-            <button class="dash-btn"  id="dash-btn" onclick="showdive('feedbacks','userstable','neworders','editprods','newcatg','editadmin','editslides','dasboard','editstore')">
+            <button class="dash-btn"  id="dash-btn" onclick="showdive('subscribers','neworders','editprods','newcatg','editadmin','editslides','dasboard','feedbacks','editstore','userstable','queries')">
+                <p class="desc">
+                <i class="fa-solid fa-check"></i>
+                <span class="x-dash-btn" id="x-dash-btn">Subscribers</span>
+                </p>
+            </button>
+            <button class="dash-btn"  id="dash-btn" onclick="showdive('queries','neworders','editprods','newcatg','editadmin','editslides','dasboard','feedbacks','editstore','userstable','subscribers')">
+                <p class="desc">
+                <i class="fa-solid fa-message"></i>
+                <span class="x-dash-btn" id="x-dash-btn">Queries</span>
+                </p>
+            </button>
+            <button class="dash-btn"  id="dash-btn" onclick="showdive('feedbacks','userstable','neworders','editprods','newcatg','editadmin','editslides','dasboard','editstore','subscribers','queries')">
                 <p class="desc">
                 <i class="fa-solid fa-comment"></i>
                 <span class="x-dash-btn" id="x-dash-btn">Feedbacks</span>
@@ -192,6 +204,7 @@
                         <th>
                         Store Email
                         </th>
+  
                     </tr>
                     @foreach($storedetails as $details)
                         <tr>
@@ -219,6 +232,7 @@
                         <td>
                         {{$details->storeEmail}}
                         </td>
+
                         </tr>
                     @endforeach
                 </table>
@@ -548,6 +562,52 @@
         </tbody>
     </table>
             </div>
+
+            <div class="all-queries" id="queries">
+            <table class="all-user">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Address</th>
+                <th>Query</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($queries as $query)
+            <tr>
+                <td>{{$query->fname}}</td>
+                <td>{{$query->lname}}</td>
+                <td>{{$query->address}}</td>
+                <td>{{$query->subject}}</td>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
+            </div>
+
+
+            <div class="all-subscribers" id="subscribers">
+            <table class="all-user">
+        <thead>
+            <tr>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($subs as $sub)
+            <tr>
+                <td>{{$sub->email}}</td>
+            </tr>
+
+            @endforeach
+
+               
+
+        </tbody>
+    </table>
+    <Button class="submit-btn ">Copy</Button>
+            </div>
             <div class="all-feedbacks" id="feedbacks">
             <table class="all-user">
         <thead>
@@ -621,7 +681,7 @@ function collapse() {
     window.onload = checkScreenWidth;
 </script>
 <script>
-    function showdive(div1,div2,div3,div4,div5,div6,div7,div8,div9){
+    function showdive(div1,div2,div3,div4,div5,div6,div7,div8,div9,div10,div11){
         //The div to be displayed
         document.getElementById(div1).style.display = "block";
         //The div to be hidden
@@ -633,6 +693,9 @@ function collapse() {
         document.getElementById(div7).style.display = "none";
         document.getElementById(div8).style.display = "none";
         document.getElementById(div9).style.display = "none";
+        document.getElementById(div10).style.display = "none";
+        document.getElementById(div11).style.display = "none";
+
     }
 </script>
 

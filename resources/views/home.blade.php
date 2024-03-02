@@ -18,6 +18,7 @@
     <title>E-Store</title>
 </head>
 <body>
+
     @include('components.header')
     @include('components.slider')
     @include('components.categories')

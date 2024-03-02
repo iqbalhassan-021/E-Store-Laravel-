@@ -18,15 +18,13 @@
     <title>404</title>
 </head>
 <body>
-
+@include('components.header')
     <div class="error disp-flex-col">
         <img src="{{asset('assets/images/404.jpg')}}" alt="404" class="error-image">
         <p class="desc">
             oops something went wrong
         </p>
-        <br>
-       <a href="/"> <button class="button">Go Back</button> </a>
     </div>
-
+@include('components.footer')
 </body>
 </html>

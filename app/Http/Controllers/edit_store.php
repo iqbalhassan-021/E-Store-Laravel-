@@ -19,6 +19,6 @@ class edit_store extends Controller
         $store->storePhone = $request->storePhone;
         $store->storeEmail = $request->storeEmail;
         $store->save();
-        return view('home');
+        return response()->noContent();
     }
 }

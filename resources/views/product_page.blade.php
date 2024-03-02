@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!--Fancybox pop-up-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
-    <title></title>
+    <title>{{$product->productName}}</title>
 </head>
 <body>
 @include('components.header')
@@ -25,19 +25,19 @@
             <div class="product-container disp-row">
             <div class="product-visual ">
                 <div class="container">
-                    <img src="{{asset('assets/images/feature_prod_01.jpg')}}" alt="Product">
+                    <img src="{{$product->productImage}}" alt="Product">
                 </div>
             </div>
             <div class="product-details">
             <div class="details-tab">
                 <p class="desc">
-                    Product Name
+                <strong>Product Name : </strong> {{$product->productName}}
                 </p>
                 <p class="desc">
-                    Product price
+                 <strong>Product Price : </strong>${{$product->productPrice}}
                 </p>
                 <p class="desc">
-                    Product Code
+                <strong>Product ID : </strong>{{$product->id}}
                 </p>
                 <p class="desc">
                     <strong>
@@ -45,22 +45,15 @@
                     </strong>
                 </p>
                 <p class="desc">
-                A torch is a portable handheld device that produces a beam of light, 
-                commonly used for illumination in various outdoor and indoor settings  
+                {{$product->productDescription}}
                 </p>
                 <p class="desc">
                     <strong>
-                        Specification
+                        Category
                     </strong>
                 </p>
                 <p class="desc">
-                    Lorem ipsum dolor sit <br>
-                    Amet, consectetur <br>
-                    Adipiscing elit,set <br>
-                    Duis aute irure <br>
-                    Ut enim ad minim <br>
-                    Dolore magna aliqua <br>
-                    Excepteur sint
+                {{$product->productCategory}}
                 </p>
                 <p class="desc">
                     <strong>
@@ -77,7 +70,7 @@
                            
                         </p>
                             <p class="desc">
-                                L
+                            {{$product->productsize}}
                             </p>
                     </div>
                     <div class="quality">
@@ -109,75 +102,31 @@
         </div>
     </div>
     </div>
-    <div class="comment-section ">
-        <div class="body-cover disp-flex-col">
-        <div class="comment-box disp-flex-col">
-            <form class="comment-form disp-flex-row search-form disp-row sub">
-            <input type="text" placeholder="Post a comment" name="comment" class="search-box desc" id="comment" required>
-                <button type="submit">
-                    Post
-                    <i class="fa fa-check">
-                    </i>
-                </button>
-            </form>
-        </div>
 
-        <div class="the-comments">
-            <table class="the-comment">
-              <tr>
-                <th>
-                    <p class="desc">
-                        <strong>
-                            Comments
-                        </strong>
-                    </p>
-                    </th>
-                    <th>
-                    <p class="desc">
-                        <strong>
-                            Date
-                        </strong>
-                    </p>
-                    </th>
-              </tr>
-              <tr>
-                <td width="80%">
-                    <p class="desc">
-                    A torch is a portable handheld device that produces a beam of light, commonly used for illumination in various outdoor and indoor settings
-                    </p>
-                </td>
-                <td width="20%">
-                    <p class="desc">
-                        30-1-2024
-                    </p>
-                </td>
-              </tr>
-            </table>
-        </div>
-        </div>
-    </div>
 @include('components.related_posts')
 @include('components.footer')
 <div id="orderPopup" style="display: none;">
     <div class="popup-content">
          <!-- Product Name -->
          <p class="desc">
-            Product name    
+         <strong>Product Name : </strong> {{$product->productName}}
         </p>
                  <!-- Product Name -->
         <p class="desc">
-            Product Code    
+        <strong>Product ID : </strong>{{$product->id}}
         </p>
         
         <!-- Product Description -->
-        <p class="desc">A torch is a portable handheld device that produces a beam of light, commonly used for illumination in various outdoor and indoor settings</p>
+        <p class="desc">{{$product->productDescription}}</p>
         
         <!-- Product Price -->
-        <p class="desc">Price: $19.99</p>
+        <p class="desc">     <strong>Product Price : </strong>${{$product->productPrice}}</p>
         <!-- Selected Size -->
-        <p class="desc">L</p>
+        <p class="desc">
+        <strong>Product Size : </strong> {{$product->productsize}}
+        </p>
         <!-- Selected Size -->
-        <p class="desc" id="_quantity">1</p>
+        <p class="desc" id="_quantity"><strong>Quantity : </strong>1</p>
         <!-- Order Form -->
         <form id="orderForm">
             <!-- Address Input -->

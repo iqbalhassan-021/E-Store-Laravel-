@@ -26,12 +26,12 @@ class product_controller extends Controller
         $product -> productCategory = $request -> productCategory;
         $product -> productsize = $request -> productsize;
         $product->save();
-        return view('home');
+        return response()->noContent();
     }
 
     function delete($id){
         $data = products::find($id);
         $data->delete();
-        return view('home');
+        return response()->noContent();
     }
 }

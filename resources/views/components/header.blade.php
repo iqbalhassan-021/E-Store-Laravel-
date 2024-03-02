@@ -10,14 +10,13 @@
                 </span>
             </button>
 </div> -->
+
 <div class="header" id="header">
     <div class="body-cover disp-flex-col">
        <div class="navbar disp-flex-row" id="navbar">
             <div class="logoholder disp-flex-row" id="logoholder">
                 <a href="/" class="logo no-decoration" >
-                @foreach($store as $predetails)
-                    {{$predetails->storeName}}
-                @endforeach
+                    {{ $store->last()->storeName}}
                 </a>
             </div>
             <div class="pages disp-flex-row" id="pages">
@@ -68,7 +67,10 @@
        </div>
        <div class="mobile-nav " id="mobilenav">
 
-
+       <form action="" class="search-form disp-flex-row mbl-search-from">
+                        <input type="text" placeholder="Search.." name="search" class="search-box" id="searchbox">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
                     <a href="#" class="no-decoration">
                          <p class="desc">HOME</p>
                     </a>
@@ -81,6 +83,7 @@
                     <a href="#" class="no-decoration">
                          <p class="desc">CONTACT</p>
                     </a>
+                 
        </div>
     </div>
 </div>

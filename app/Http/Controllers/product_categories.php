@@ -21,11 +21,11 @@ class product_categories extends Controller
         $category->id = $request->id;
         $category->categoryImage = $filename;
         $category->save();
-        return view('home');
+        return response()->noContent();
     }
     function delete($id){
         $data = category::find($id);
         $data->delete();
-        return view('home');
+        return response()->noContent();
     }
 }

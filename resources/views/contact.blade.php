@@ -33,12 +33,13 @@
         <div class="body-cover disp-flex-row">
           
             <div class="container disp-flex-col">
-            <form class="contact-form">
+            <form class="contact-form" action="new_queries" method="post">
+            @csrf <!-- CSRF protection -->
                 <label for="fname" class="desc">First Name</label>
-                <input class="input-field" type="text" id="fname" name="firstname" placeholder="Your name..">
+                <input class="input-field" type="text" id="fname" name="fname" placeholder="Your name..">
 
                 <label for="lname"  class="desc">Last Name</label>
-                <input class="input-field desc" type="text" id="lname" name="lastname" placeholder="Your last name..">
+                <input class="input-field desc" type="text" id="lname" name="lname" placeholder="Your last name..">
 
                 <label for="address" class="desc">Address</label>
                 <input class="input-field desc" type="text" id="address" name="address" placeholder="Address">

@@ -22,11 +22,11 @@ class product_slider extends Controller
         $slide->slideproductDesc = $request->slideproductDesc;
         $slide->slideproductIMG = $filename;
         $slide->save();
-        return view('home');
+        return response()->noContent();
     }
     function delete($id){
         $data = slider::find($id);
         $data->delete();
-        return view('home');
+        return response()->noContent();
     }
 }

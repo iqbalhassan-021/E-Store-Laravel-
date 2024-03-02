@@ -286,7 +286,7 @@
 }
 .feature-prod-img{
     width: 100%;
-    height: auto;
+    height: 351px;
     border-top-right-radius:  0.25rem;
     border-top-left-radius:  0.25rem;
 }
@@ -1300,6 +1300,16 @@ label {
   width: auto;
   display: none;
 }
+.all-queries{
+  height: auto;
+  width: auto;
+  display: none;
+}
+.all-subscribers{
+  height: auto;
+  width: auto;
+  display: none;
+}
 .all-feedbacks{
   height: auto;
   width: auto;
@@ -1618,4 +1628,12 @@ label {
 .grid-f3{
   grid-template-columns:repeat(4,1fr);
 }
+}
+.mbl-search-from{
+  display: flex;
+  height: auto;
+  width: 50%;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }

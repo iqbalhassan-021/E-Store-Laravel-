@@ -5,7 +5,7 @@
             <div class="tab ">
                 <div class="footer-card">
                     <h2 class="tagline" style="color: white;">
-                        E Store
+                    {{ $store->last()->storeName}}
                     </h2>
                     <hr style="width:100%;text-align:left;margin-left:0">
                     <ul>
@@ -13,7 +13,7 @@
                             <p class="desc">
                                 <a href="#" class="no-decoration">
                                     <i class="fa fa-map-marker"></i>
-                                    123 Consectetur at ligula 10660
+                                    {{ $store->last()->storeAddress}}
                                 </a>
                             </p>
                         </li>
@@ -21,7 +21,7 @@
                             <p class="desc">
                                 <a href="#" class="no-decoration">
                                     <i class="fa fa-phone"></i>
-                                    010-020-0340
+                                    {{ $store->last()->storePhone}}
                                 </a>
                             </p>
                         </li>
@@ -29,7 +29,7 @@
                             <p class="desc">
                                 <a href="#" class="no-decoration">
                                     <i class="fa fa-envelope"></i>
-                                    info@company.com
+                                    {{ $store->last()->storeEmail}}
                                 </a>
                             </p>
                         </li>
@@ -101,30 +101,31 @@
         <div class="tab disp-row social-section">
             <div class="tab disp-row icons">
                 <div class="social-icons">
-                    <a href="#" class="icon disp-flex-row">
+                    <a href="{{ $store->last()->facebookLink}}" class="icon disp-flex-row">
                     <i class="fa-brands fa-facebook-f"></i>
                     </a>
                 </div>
                 <div class="social-icons">
-                    <a href="#" class="icon disp-flex-row">
+                    <a href="{{ $store->last()->instagramLink}}" class="icon disp-flex-row">
                     <i class="fa-brands fa-instagram"></i>
                     </a>
                 </div>
                 <div class="social-icons">
-                    <a href="#" class="icon disp-flex-row">
+                    <a href="{{ $store->last()->whatsappLink}}" class="icon disp-flex-row">
                     <i class="fa-brands fa-whatsapp"></i>
                     </a>
                 </div>
                 <div class="social-icons">
-                    <a href="#" class="icon disp-flex-row">
+                    <a href="{{ $store->last()->linkedinLink}}" class="icon disp-flex-row">
                     <i class="fa-brands fa-linkedin-in"></i>
                     </a>
                 </div>
             </div>
             <div class="tab sub-tab block-right">
                 <div class="sub-holder">
-                <form action="" class="search-form disp-row sub">
-                <input type="text" placeholder="email.." name="search" class="search-box subbox" id="searchbox">
+                <form action="new_subscriber" class="search-form disp-row sub" method="post">
+                @csrf
+                <input type="email" placeholder="email.." name="email" class="search-box subbox" id="email">
                 <button type="submit">
                     Subsrcribe
                     <i class="fa fa-check">
@@ -135,7 +136,7 @@
         </div>
         <div class="tab">
             <p class="desc copyright">
-                Copyright © 2024 Company Name | Developed by <a href="#" class="link no-decoration"><u>E N T E R T A I N E R</u></a>
+                Copyright © 2024 Company Name | Developed by <a href="https://hassansbio.netlify.app/" class="link no-decoration"><u>E N T E R T A I N E R</u></a>
             </p>
         </div>
     </div>
