@@ -17,6 +17,7 @@
             <div class="logoholder disp-flex-row" id="logoholder">
                 <a href="/" class="logo no-decoration" >
                     {{ $store->last()->storeName}}
+      
                 </a>
             </div>
             <div class="pages disp-flex-row" id="pages">

@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!--Fancybox pop-up-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+    @if ($searchResults->isNotEmpty())
     <title>Searched for {{ $searchResults->first()->productName }}</title>
 </head>
 <body>
@@ -102,7 +103,7 @@
         </div>
     </div>
     </div>
-
+    
 @include('components.related_posts')
 @include('components.footer')
 <div id="orderPopup" style="display: none;">
@@ -141,6 +142,22 @@
     </div>
 </div>
 
+    @else
+    <title>Searched for </title>
+</head>
+<body>
+@include('components.header')
+    <div class="the-product">
+        <div class="body-cover ">
+            <div class="product-container  disp-flex-col">
+                <img src="{{asset('assets/images/Product-presentation-cuate.png')}}" alt="Cannot find what are you looking for" class="normal-size"><br>
+           <p class="desc"><strong>Cannot find what you are looking for</strong> </p>
+        </div>
+    </div>
+    </div>
+    @include('components.related_posts')
+    @include('components.footer')
+    @endif
 
 <!-- JavaScript -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

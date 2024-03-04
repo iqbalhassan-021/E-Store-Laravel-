@@ -2,7 +2,7 @@
     <div class="body-cover">
         <div class="heading disp-flex-col">
             <p class="tagline">
-                Categories of The Month
+                Categories 
             </p>
             <br>
             <p class="desc">
