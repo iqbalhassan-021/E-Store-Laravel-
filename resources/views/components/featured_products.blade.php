@@ -9,35 +9,39 @@
             This product is often chosen by the store owner or manager to showcase a particular item that they want to promote or draw attention to.
             </p>
             <div class="featured-prods grid">
-            @foreach($feauredproducts as $products)
-                <div class="card">
-                    <a href="{{url('product/'.$products->id)}}">
-                        <img class="feature-prod-img" src="{{$products->productImage}}" alt="{{$products->productName}}">
-                    </a>
-                    <div class="tab disp-flex-row">
-                        <p class="desc align-left" style="color:#bcbcbc !important;">
-                            Price
-                        </p>
-                        <p class="desc align-right" style="color:#bcbcbc !important;">
-                            ${{$products->productPrice}}
-                        </p>
-                    </div>
-                    <div class="tab">
-                        <a href="{{url('product/'.$products->id)}}" class="no-decoration">
-                            <p class="tagline">
-                            {{$products->productName}}
-                            </p>
-                            <span>{{$products->id}}</span>
-                        </a>
-                    </div>
-                    <div class="tab">
-                        <p class="desc">
-                        {{$products->productDescription}}
-                        </p>
-                    </div>
+            @if($feauredproducts ->isEmpty())
+            <p>No featured products available yet.</p>
+                @else
+                    @foreach($feauredproducts  as $products)
+                        <div class="card">
+                            <a href="{{url('product/'.$products->id)}}">
+                                <img class="feature-prod-img" src="{{$products->productImage}}" alt="{{$products->productName}}">
+                            </a>
+                            <div class="tab disp-flex-row">
+                                <p class="desc align-left" style="color:#bcbcbc !important;">
+                                    Price
+                                </p>
+                                <p class="desc align-right" style="color:#bcbcbc !important;">
+                                    ${{$products->productPrice}}
+                                </p>
+                            </div>
+                            <div class="tab">
+                                <a href="{{url('product/'.$products->id)}}" class="no-decoration">
+                                    <p class="tagline">
+                                        {{$products->productName}}
+                                    </p>
+                                    <span>{{$products->id}}</span>
+                                </a>
+                            </div>
+                            <div class="tab">
+                                <p class="desc">
+                                    {{$products->productDescription}}
+                                </p>
+                            </div>
+                        </div>
+                    @endforeach
+                @endif
 
-                </div>
-                @endforeach
             </div>
             
         </div>

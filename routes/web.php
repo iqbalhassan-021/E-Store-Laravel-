@@ -1,5 +1,4 @@
 <?php
-
 use App\Http\Controllers\auth_controller;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\edit_store;

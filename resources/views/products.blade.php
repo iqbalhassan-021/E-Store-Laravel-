@@ -13,7 +13,7 @@
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
-    <title>E-Store</title>
+    <title> {{ $store->last()->storeName}}</title>
 </head>
 <body>
     @include('components.header')
@@ -22,35 +22,39 @@
 
             <div class="show-products disp-flex-row">
                 <div class="grid-f3">
-                @foreach($allproducts as $products)
-                <div class="card">
-                    <a href="{{url('product/'.$products->id)}}">
-                        <img class="feature-prod-img" src="{{$products->productImage}}" alt="{{$products->productName}}">
-                    </a>
-                    <div class="tab disp-flex-row">
-                        <p class="desc align-left" style="color:#bcbcbc !important;">
-                            Price
-                        </p>
-                        <p class="desc align-right" style="color:#bcbcbc !important;">
-                            ${{$products->productPrice}}
-                        </p>
-                    </div>
-                    <div class="tab">
-                        <a href="{{url('product/'.$products->id)}}" class="no-decoration">
-                            <p class="tagline">
-                            {{$products->productName}}
-                            </p>
-                            <span>{{$products->id}}</span>
-                        </a>
-                    </div>
-                    <div class="tab">
-                        <p class="desc">
-                        {{$products->productDescription}}
-                        </p>
-                    </div>
+                @if($allproducts->isEmpty())
+                <p><strong>No products available yet.</strong></p>
+                    @else
+                        @foreach($allproducts as $products)
+                            <div class="card">
+                                <a href="{{url('product/'.$products->id)}}">
+                                    <img class="feature-prod-img" src="{{$products->productImage}}" alt="{{$products->productName}}">
+                                </a>
+                                <div class="tab disp-flex-row">
+                                    <p class="desc align-left" style="color:#bcbcbc !important;">
+                                        Price
+                                    </p>
+                                    <p class="desc align-right" style="color:#bcbcbc !important;">
+                                        ${{$products->productPrice}}
+                                    </p>
+                                </div>
+                                <div class="tab">
+                                    <a href="{{url('product/'.$products->id)}}" class="no-decoration">
+                                        <p class="tagline">
+                                            {{$products->productName}}
+                                        </p>
+                                        <span>{{$products->id}}</span>
+                                    </a>
+                                </div>
+                                <div class="tab">
+                                    <p class="desc">
+                                        {{$products->productDescription}}
+                                    </p>
+                                </div>
+                            </div>
+                        @endforeach
+                    @endif
 
-                </div>
-                @endforeach
                 </div>
             </div>
         </div>

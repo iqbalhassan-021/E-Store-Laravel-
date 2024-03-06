@@ -19,7 +19,7 @@
                         </li>
                         <li>
                             <p class="desc">
-                                <a href="#" class="no-decoration">
+                                <a href="tel:.'{{ $store->last()->storePhone}}'" class="no-decoration">
                                     <i class="fa fa-phone"></i>
                                     {{ $store->last()->storePhone}}
                                 </a>
@@ -27,7 +27,7 @@
                         </li>
                         <li>
                             <p class="desc">
-                                <a href="#" class="no-decoration">
+                                <a href="mailto:'.{{ $store->last()->storeEmail}}'" class="no-decoration">
                                     <i class="fa fa-envelope"></i>
                                     {{ $store->last()->storeEmail}}
                                 </a>

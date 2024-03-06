@@ -54,20 +54,23 @@ class Controller extends BaseController
             'store'=> $store
             ]);
     }
+
     public function product($id){
         $producttype = DB::table('categories')->get();
         $store = DB::table('storedetails')->get();
         $feauredproducts = DB::table('products')->take(3)->get();
         $product = products::find($id);
+        $allproducts = DB::table('products')->get();
         return view('product_page',[
             'producttype'=>$producttype,
             'feauredproducts'=> $feauredproducts,
             'store'=> $store,
+            'allproducts'=> $allproducts,
             'product' => $product
         ]);
     }
     public function search(Request $request) {
-
+        $allproducts = DB::table('products')->get();
         $producttype = DB::table('categories')->get();
         $store = DB::table('storedetails')->get();
         $feauredproducts = DB::table('products')->take(3)->get();
@@ -79,7 +82,8 @@ class Controller extends BaseController
             'producttype'=>$producttype,
             'feauredproducts'=> $feauredproducts,
             'store'=> $store,
-            'searchResults' => $searchResults
+            'searchResults' => $searchResults,
+            'allproducts'=> $allproducts
         ]);
     }
     public function auth(){
