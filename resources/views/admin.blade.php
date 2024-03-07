@@ -386,6 +386,7 @@
                 <th>Product Description</th>
                 <th>Category</th>
                 <th>Size</th>
+                <th>Shipping Fees</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -400,6 +401,7 @@
                 <td>{{$data->productDescription}}</td>
                 <td>{{$data->productCategory}}</td>
                 <td>{{$data->productsize}}</td>
+                <td>{{$data->shippingfees}}</td>
                 <td>
                 <a href=""><button class="submit-btn ">Edit</button></a>
                 <a href="{{url('delete/'.$data->id)}}"><button class="submit-btn warning">Remove</button></a>
@@ -431,6 +433,9 @@
         
         <label for="productsize">Size:</label><br>
         <input type="text" id="productsize" name="productsize" class="input-field" required><br>
+
+        <label for="shippingfees">Shipping Fees:</label><br>
+        <input type="text" id="shippingfees" name="shippingfees" class="input-field" required><br>
         
         <input type="submit" value="Add Product" class="submit-btn">
     </form>

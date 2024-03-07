@@ -25,6 +25,7 @@ class product_controller extends Controller
         $product -> productDescription = $request -> productDescription;
         $product -> productCategory = $request -> productCategory;
         $product -> productsize = $request -> productsize;
+        $product -> shippingfees = $request -> shippingfees;
         $product->save();
         return response()->noContent();
     }
