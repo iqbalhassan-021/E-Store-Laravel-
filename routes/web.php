@@ -2,6 +2,7 @@
 use App\Http\Controllers\auth_controller;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\edit_store;
+use App\Http\Controllers\new_orders;
 use App\Http\Controllers\order_controller;
 use App\Http\Controllers\product_categories;
 use App\Http\Controllers\product_controller;
@@ -33,4 +34,5 @@ Route::get('delete/{id}',[product_slider::class,'delete']);
 Route::post('store_details',[edit_store::class,'store_details']);
 Route::post('new_subscriber',[store_subscribers::class,'new_subscriber']);
 Route::post('new_queries',[user_queries::class,'new_queries']);
-Route::post('new_orders',[order_controller::class,'new_orders']);
+Route::post('place_order',[new_orders::class,'place_order']);
+

@@ -113,7 +113,7 @@
 <div id="orderPopup" style="display: none;">
     <div class="popup-content">
         <!-- Order Form -->
-        <form action="new_orders" method="post" id="orderForm" >
+        <form action="place_order"  id="orderForm" method="post">
         @csrf
             <!-- Product Name -->
             <label for="productName">Product Name:</label>
@@ -156,8 +156,12 @@
 
             <div class="payment-method disp-flex-row">
                <p class="desc">Cash on Delivery avaiable  </p><i class="fa-solid fa-truck "></i>
-            </div>
-
+            </div><br>
+            <span class="desc">
+            @if(session()->has('message'))
+           {{ session()->get('message') }}
+            @endif
+            </span> <br>
             <!-- Submit Button -->
             <button type="submit" class="button button-big" style="margin-top: 20px;">Confirm Order</button>
         </form>
@@ -231,11 +235,11 @@ updateTotal();
             autoFocus: false
         });
         
-        // Handle form submission
-        $('#orderForm').submit(function(event) {
-            event.preventDefault();
-            $.fancybox.close();
-        });
+        // // Handle form submission
+        // $('#orderForm').submit(function(event) {
+        //     event.preventDefault();
+        //     $.fancybox.close();
+        // });
     });
 
 </script>
