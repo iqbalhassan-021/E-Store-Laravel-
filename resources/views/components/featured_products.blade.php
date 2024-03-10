@@ -14,7 +14,7 @@
                 @else
                     @foreach($feauredproducts  as $products)
                         <div class="card">
-                            <a href="{{url('product/'.$products->id)}}">
+                            <a href="{{url('/product/'.$products->id)}}">
                                 <img class="feature-prod-img" src="{{$products->productImage}}" alt="{{$products->productName}}">
                             </a>
                             <div class="tab disp-flex-row">
@@ -26,7 +26,7 @@
                                 </p>
                             </div>
                             <div class="tab">
-                                <a href="{{url('product/'.$products->id)}}" class="no-decoration">
+                                <a href="{{url('/product/'.$products->id)}}" class="no-decoration">
                                     <p class="tagline">
                                         {{$products->productName}}
                                     </p>

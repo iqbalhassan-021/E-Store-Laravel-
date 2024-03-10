@@ -17,7 +17,7 @@
                     <p class="desc">
                     {{$slidercontent->slideproductDesc}}
                     </p>
-                    <a href="" class="no-decoration link">
+                    <a href="{{url('/product/'.$slidercontent->id)}}" class="no-decoration link">
                         Learn more
                     </a>
                     </div> 

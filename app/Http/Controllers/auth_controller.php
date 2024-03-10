@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\person;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class auth_controller extends Controller
 {
@@ -34,10 +35,48 @@ class auth_controller extends Controller
             $username = $person -> username;
             $password = $person -> password;
             if($username == "admin" && $password == "admin@tales"){
-                return view('admin');
+                $srnum = 1;
+                // Retrieve data from the database
+                $products = DB::table('products')->get();
+                $categories = DB::table('categories')->get();
+                $slider = DB::table('slider')->get();
+                $users = DB::table('person')->get();
+                $storedetails = DB::table('storedetails')->get();
+                $producttype = DB::table('categories')->get();
+                $subs = DB::table('subscribers')->get();
+                $queries = DB::table('queries')->get();
+                $store = DB::table('storedetails')->get();
+                // Get the row count
+                $products_count = $products->count();
+                $categories_count = $categories->count();
+                $user_count = $users->count();
+                // Pass variables to the view using compact()
+                return view('admin', [
+                    'srnum' => $srnum,
+                    'products' => $products,
+                    'categories' => $categories,
+                    'products_count' => $products_count,
+                    'categories_count' => $categories_count,
+                    'users' => $users,
+                    'user_count' => $user_count,
+                    'slider' => $slider,
+                    'storedetails' => $storedetails,
+                    'producttype'=>$producttype,
+                    'subs' => $subs,
+                    'queries' => $queries,
+                    'store' => $store
+                ]);
             }
             else{
-                return view('user');
+                $store = DB::table('storedetails')->get();
+                $producttype = DB::table('categories')->get();
+                $user = $request->query('username');
+    
+                return view('user',[
+                    'producttype'=>$producttype,
+           
+                    'store'=> $store
+                ]);
             }
         }
         else{

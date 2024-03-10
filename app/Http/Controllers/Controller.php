@@ -74,18 +74,21 @@ class Controller extends BaseController
         $producttype = DB::table('categories')->get();
         $store = DB::table('storedetails')->get();
         $feauredproducts = DB::table('products')->take(3)->get();
-        $searchValue = $request->search;
-         // Search for products by name in the database
+        
+        $searchValue = $request->query('search'); // Retrieve search query from request
+    
+        // Search for products by name in the database
         $searchResults = DB::table('products')->where('productName', 'like', '%' . $searchValue . '%')->get();
-
-        return view('search',[
-            'producttype'=>$producttype,
-            'feauredproducts'=> $feauredproducts,
-            'store'=> $store,
+    
+        return view('search', [
+            'producttype' => $producttype,
+            'feauredproducts' => $feauredproducts,
+            'store' => $store,
             'searchResults' => $searchResults,
-            'allproducts'=> $allproducts
+            'allproducts' => $allproducts
         ]);
     }
+    
     public function auth(){
         $producttype = DB::table('categories')->get();
         $store = DB::table('storedetails')->get();
@@ -102,47 +105,8 @@ class Controller extends BaseController
             'store'=> $store
         ]);
     }
-    public function user(){
-        $store = DB::table('storedetails')->get();
-        $producttype = DB::table('categories')->get();
-        return view('user',[
-            'producttype'=>$producttype,
-            'store'=> $store
-        ]);
-    }
-    public function admin() {
-        $srnum = 1;
-        // Retrieve data from the database
-        $products = DB::table('products')->get();
-        $categories = DB::table('categories')->get();
-        $slider = DB::table('slider')->get();
-        $users = DB::table('person')->get();
-        $storedetails = DB::table('storedetails')->get();
-        $producttype = DB::table('categories')->get();
-        $subs = DB::table('subscribers')->get();
-        $queries = DB::table('queries')->get();
-        $store = DB::table('storedetails')->get();
-        // Get the row count
-        $products_count = $products->count();
-        $categories_count = $categories->count();
-        $user_count = $users->count();
-        // Pass variables to the view using compact()
-        return view('admin', [
-            'srnum' => $srnum,
-            'products' => $products,
-            'categories' => $categories,
-            'products_count' => $products_count,
-            'categories_count' => $categories_count,
-            'users' => $users,
-            'user_count' => $user_count,
-            'slider' => $slider,
-            'storedetails' => $storedetails,
-            'producttype'=>$producttype,
-            'subs' => $subs,
-            'queries' => $queries,
-            'store' => $store
-        ]);
-    }
+
+
     public function redirect(){
         $store = DB::table('storedetails')->get();
         $producttype = DB::table('categories')->get();

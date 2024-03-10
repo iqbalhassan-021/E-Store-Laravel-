@@ -47,7 +47,7 @@
                         @foreach($producttype as $type)
                         <li>
                             <p class="desc">
-                                <a href="#" class="no-decoration">
+                                <a href="{{url('/products')}}" class="no-decoration">
                                  {{$type->categoryName}}
                                 </a>
                             </p>
@@ -66,28 +66,28 @@
                     <ul>
                         <li>
                             <p class="desc">
-                                <a href="#" class="no-decoration">
+                                <a href="{{url('/')}}" class="no-decoration">
                                     Home
                                 </a>
                             </p>
                         </li>
                         <li>
                             <p class="desc">
-                                <a href="#" class="no-decoration">
+                                <a href="{{url('/about')}}" class="no-decoration">
                                     About
                                 </a>
                             </p>
                         </li>
                         <li>
                             <p class="desc">
-                                <a href="#" class="no-decoration">
+                                <a href="{{url('/contact')}}" class="no-decoration">
                                     Contact
                                 </a>
                             </p>
                         </li>
                         <li>
                             <p class="desc">
-                                <a href="#" class="no-decoration">
+                                <a href="{{url('/products')}}" class="no-decoration">
                                     Shop
                                 </a>
                             </p>

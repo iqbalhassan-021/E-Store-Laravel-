@@ -95,7 +95,7 @@
                 <p class="desc"><strong>Total: </strong>$<span id="total"></span></p>
                 </div>
                 <div class="buy-cart disp-flex-row">
-                         <button class="button button-big" data-fancybox data-src="#orderPopup">
+                         <button class="button button-big" data-fancybox data-src="#orderPopup" >
                             Buy
                         </button> 
                         <button class="button button-big" id="addcart">
@@ -113,7 +113,7 @@
 <div id="orderPopup" style="display: none;">
     <div class="popup-content">
         <!-- Order Form -->
-        <form action="place_order"  id="orderForm" method="post">
+        <form action="{{ url('place_order') }}"  id="orderForm" method="post">
         @csrf
             <!-- Product Name -->
             <label for="productName">Product Name:</label>
@@ -158,12 +158,10 @@
                <p class="desc">Cash on Delivery avaiable  </p><i class="fa-solid fa-truck "></i>
             </div><br>
             <span class="desc">
-            @if(session()->has('message'))
-           {{ session()->get('message') }}
-            @endif
+                      
             </span> <br>
             <!-- Submit Button -->
-            <button type="submit" class="button button-big" style="margin-top: 20px;">Confirm Order</button>
+            <button type="submit" class="button button-big" style="margin-top: 20px;" id="confirmOrderButton">Confirm Order</button>
         </form>
     </div>
 </div>
@@ -191,7 +189,7 @@ $(document).ready(function() {
         // Hide the popup after 3 seconds
         setTimeout(function() {
             $('#cartpopup').fadeOut();
-        }, 3000);
+        }, 5000);
     });
 });
 </script>
@@ -229,18 +227,40 @@ function decrementCounter() {
 updateTotal();
 
 
-    $(document).ready(function() {
-        // Initialize fancybox
-        $("[data-fancybox]").fancybox({
-            autoFocus: false
-        });
-        
-        // // Handle form submission
-        // $('#orderForm').submit(function(event) {
-        //     event.preventDefault();
-        //     $.fancybox.close();
-        // });
+$(document).ready(function() {
+    // Initialize fancybox
+    $("[data-fancybox]").fancybox({
+        autoFocus: false
     });
+
+    //  Handle form submission
+    $('#orderForm').submit(function(event) {
+        event.preventDefault();
+
+        // Submit the form
+        var form = $(this);
+        $.ajax({
+            url: form.attr('action'),
+            type: form.attr('method'),
+            data: form.serialize(),
+            success: function(response) {
+                // Show a success message (if applicable)
+                // Optionally, you can also redirect the user to a success page
+                console.log("Order placed successfully");
+
+                // Delay the closing of FancyBox
+                setTimeout(function() {
+                    $.fancybox.close();
+                }, 3000); // 3000 milliseconds = 3 seconds
+            },
+            error: function(xhr, status, error) {
+                // Show an error message (if applicable)
+                console.error("Failed to place order");
+            }
+        });
+    });
+});
+
 
 </script>
 <script>

@@ -44,7 +44,7 @@
 
             </div>
             <div class="search-cart disp-flex-row">
-            <form action="search" class="search-form disp-flex-row" method="GET">
+            <form action="{{ url('search') }}" class="search-form disp-flex-row" method="GET">
                 <input type="text" placeholder="Search.." name="search" class="search-box" id="searchbox">
                 <button type="submit"><i class="fa fa-search"></i></button>
             </form>

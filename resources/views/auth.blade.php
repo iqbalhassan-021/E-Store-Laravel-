@@ -43,11 +43,10 @@
                             <label for="password" class="desc left">Password</label>
                             <input required class="input-field login-input desc" type="password" id="password" name="password" placeholder="password">
                             <div class="x-tab disp-row">
-                               
-                                <label for="showpass" class="left desc" onclick="myFunction()">
-                                <input type="checkbox" name="showpass" id="showpass" class="desc"  onclick="myFunction()">
-                                        Show password
-                                </label>
+                            <label for="showpass" class="left desc">
+                                <input type="checkbox" name="showpass" id="showpass" class="desc" onclick="showpasswd()">
+                                Show password
+                            </label>
                                 <a href="#" id="fpas" class="link no-decoration right" onclick="show('resetpass','login_form','signup_form')">
                                     <p class="desc">
                                         Forgot password
@@ -114,7 +113,7 @@
     </div>
 @include('components.footer')
 <script>
-function myFunction() {
+function showpasswd() {
   var x = document.getElementById("password");
   if (x.type === "password") {
     x.type = "text";
