@@ -46,10 +46,12 @@ class auth_controller extends Controller
                 $subs = DB::table('subscribers')->get();
                 $queries = DB::table('queries')->get();
                 $store = DB::table('storedetails')->get();
+                $order = DB::table('orders')->get();
                 // Get the row count
                 $products_count = $products->count();
                 $categories_count = $categories->count();
                 $user_count = $users->count();
+                $order_count = $order->count();
                 // Pass variables to the view using compact()
                 return view('admin', [
                     'srnum' => $srnum,
@@ -64,7 +66,9 @@ class auth_controller extends Controller
                     'producttype'=>$producttype,
                     'subs' => $subs,
                     'queries' => $queries,
-                    'store' => $store
+                    'store' => $store,
+                    'order' => $order,
+                    'order_count' => $order_count
                 ]);
             }
             else{

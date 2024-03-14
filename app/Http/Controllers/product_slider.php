@@ -24,9 +24,5 @@ class product_slider extends Controller
         $slide->save();
         return response()->noContent();
     }
-    function delete($id){
-        $data = slider::find($id);
-        $data->delete();
-        return response()->noContent();
-    }
+
 }

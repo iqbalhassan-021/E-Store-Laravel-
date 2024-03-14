@@ -87,13 +87,8 @@
                 <span class="x-dash-btn" id="x-dash-btn">Queries</span>
                 </p>
             </button>
-            <button class="dash-btn"  id="dash-btn" onclick="showdive('feedbacks','userstable','neworders','editprods','newcatg','editadmin','editslides','dasboard','editstore','subscribers','queries')">
-                <p class="desc">
-                <i class="fa-solid fa-comment"></i>
-                <span class="x-dash-btn" id="x-dash-btn">Feedbacks</span>
-                </p>
-            </button>
-<a href="/">
+
+        <a href="/">
             <button class="dash-btn"  id="dash-btn">
                 <p class="desc">
                 <i class="fa-solid fa-arrow-left"></i>
@@ -144,7 +139,7 @@
                                 <p class="desc">
                                 New Orders
                                 <span class="x-dash-btn">
-                                <?php echo'0';?>
+                                {{$order_count}}
                                 </span>
                                 </p>
                                
@@ -278,7 +273,7 @@
                 <th>Product Code</th>
                 <th>Product Description</th>
                 <th>Product Image</th>
-                <th>Action</th>
+             
             
             </tr>
         </thead>
@@ -292,9 +287,7 @@
                 <td>
                 <img src="{{$slides->slideproductIMG}}" alt="{{$slides->slideproductName}}">
                 </td>
-                <td>
-                <a href="{{url('delete/'.$slides->id)}}"><button class="submit-btn warning">Remove</button></a>
-                </td>
+               
             </tr>
             @endforeach
 
@@ -343,7 +336,7 @@
                 <th>Category No#</th>
                 <th>Category Name</th>
                 <th>Category Image</th>
-                <th>Action</th>
+
             </tr>
         </thead>
         <tbody>
@@ -352,10 +345,7 @@
                 <td>{{$srnum++}}</td>
                 <td>{{$category->categoryName}}</td>
                 <td><img src="{{$category->categoryImage}}" alt="{{$category->categoryName}}"></td>
-                <td>
-                   
-                    <a href="{{url('delete/'.$category->id)}}"><button class="submit-btn warning">Remove</button></a>
-                </td>
+
             </tr>
             @endforeach
 
@@ -368,7 +358,7 @@
                 <label for="categoryName">Category Name:</label><br>
                 <input type="text" id="categoryName" name="categoryName" class="input-field" required><br>
                 <label for="id">Category ID:</label><br>
-                <input type="text" id="id" name="id" class="input-field" required ><br>
+                <input type="text" id="id" name="id" class="input-field" required placeholder="same as name"><br>
                 <input type="submit" value="Add Category" class="submit-btn">
             </form>
             <!-- Add more rows as needed -->
@@ -444,103 +434,32 @@
                 <table  class="all-user">
             <thead>
             <tr>
-                <th>Username</th>
+                <th>Buyer Name</th>
                 <th>Address</th>
                 <th>Phone Number</th>
                 <th>Product Name</th>
                 <th>Product Code</th>
-                <th>Product Image</th>
                 <th>Quantity</th>
-                <th>Size</th>
+                <th>Price</th>
                 <th>Action</th>
             </tr>
         </thead>
         <tbody>
-            <!-- Sample row, replace with dynamic data -->
+            @foreach ($order as $item)
             <tr>
-                <td>User1</td>
-                <td>123 Main St</td>
-                <td>555-123-4567</td>
-                <td>Product 1</td>
-                <td>P001</td>
-                <td><img src="{{asset('assets/images/category_img_03.jpg')}}" alt="Product 1"></td>
-                <td>1</td>
-                <td>L</td>
+                <td>{{$item->buyername}}</td>
+                <td>{{$item->address}}</td>
+                <td>{{$item->phone}}</td>
+                <td>{{$item->productName}}</td>
+                <td>{{$item->productId}}</td>
+                <td>{{$item->productPrice}}</td>
                 <td>
                 <button class="submit-btn ">Aprove</button>
                    <button class="submit-btn warning">Remove</button>   
                 </td>
             </tr>
-            <tr>
-                <td>User1</td>
-                <td>123 Main St</td>
-                <td>555-123-4567</td>
-                <td>Product 1</td>
-                <td>P001</td>
-                <td><img src="{{asset('assets/images/category_img_03.jpg')}}" alt="Product 1"></td>
-                <td>1</td>
-                <td>L</td>
-                <td>
-                <button class="submit-btn ">Aprove</button>
-                   <button class="submit-btn warning">Remove</button>   
-                </td>
-            </tr>
-            <tr>
-                <td>User1</td>
-                <td>123 Main St</td>
-                <td>555-123-4567</td>
-                <td>Product 1</td>
-                <td>P001</td>
-                <td><img src="{{asset('assets/images/category_img_03.jpg')}}" alt="Product 1"></td>
-                <td>1</td>
-                <td>L</td>
-                <td>
-                <button class="submit-btn ">Aprove</button>
-                   <button class="submit-btn warning">Remove</button>   
-                </td>
-            </tr>
-            <tr>
-                <td>User1</td>
-                <td>123 Main St</td>
-                <td>555-123-4567</td>
-                <td>Product 1</td>
-                <td>P001</td>
-                <td><img src="{{asset('assets/images/category_img_03.jpg')}}" alt="Product 1"></td>
-                <td>1</td>
-                <td>L</td>
-                <td>
-                <button class="submit-btn ">Aprove</button>
-                   <button class="submit-btn warning">Remove</button>   
-                </td>
-            </tr>
-            <tr>
-                <td>User1</td>
-                <td>123 Main St</td>
-                <td>555-123-4567</td>
-                <td>Product 1</td>
-                <td>P001</td>
-                <td><img src="{{asset('assets/images/category_img_03.jpg')}}" alt="Product 1"></td>
-                <td>1</td>
-                <td>L</td>
-                <td>
-                <button class="submit-btn ">Aprove</button>
-                   <button class="submit-btn warning">Remove</button>   
-                </td>
-            </tr>
-            <tr>
-                <td>User1</td>
-                <td>123 Main St</td>
-                <td>555-123-4567</td>
-                <td>Product 1</td>
-                <td>P001</td>
-                <td><img src="{{asset('assets/images/category_img_03.jpg')}}" alt="Product 1"></td>
-                <td>1</td>
-                <td>L</td>
-                <td>
-                <button class="submit-btn ">Aprove</button>
-                   <button class="submit-btn warning">Remove</button>   
-                </td>
-            </tr>
+            @endforeach
+           
             <!-- Add more rows as needed -->
         </tbody>
     </table>
@@ -659,6 +578,16 @@
             </div>
 </div>
 <script>
+    // Get references to the input elements
+    var input1 = document.getElementById('categoryName');
+    var input2 = document.getElementById('id');
+    // Add an event listener to input1
+    input1.addEventListener('input', function() {
+        // Update the value of input2 whenever input1 changes
+        input2.value = input1.value;
+    });
+</script>
+<script>
 function collapse() {
     var btn_text = document.getElementsByClassName('x-dash-btn');
     var _btn = document.getElementsByClassName('dash-btn');
@@ -704,17 +633,7 @@ function collapse() {
     }
 </script>
 
-<script>
-    // Get references to the input elements
-    var input1 = document.getElementById('categoryName');
-    var input2 = document.getElementById('id');
 
-    // Add an event listener to input1
-    input1.addEventListener('input', function() {
-        // Update the value of input2 whenever input1 changes
-        input2.value = input1.value;
-    });
-</script>
 
 </body>
 </html>

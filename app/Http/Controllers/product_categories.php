@@ -23,9 +23,5 @@ class product_categories extends Controller
         $category->save();
         return response()->noContent();
     }
-    function delete($id){
-        $data = category::find($id);
-        $data->delete();
-        return response()->noContent();
-    }
+
 }

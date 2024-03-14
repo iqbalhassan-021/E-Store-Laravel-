@@ -10,7 +10,7 @@
                 </span>
             </button>
 </div> -->
-
+ 
 <div class="header" id="header">
     <div class="body-cover disp-flex-col">
        <div class="navbar disp-flex-row" id="navbar">
@@ -27,17 +27,17 @@
                     </a>
                 </div>
                 <div class="page-holder disp-flex-row">
-                    <a href="/about" class="no-decoration">
+                    <a href="{{url('about')}}" class="no-decoration">
                         ABOUT
                     </a>
                 </div>
                 <div class="page-holder disp-flex-row">
-                    <a href="products" class="no-decoration">
+                    <a href="{{url('products')}}" class="no-decoration">
                         SHOP
                     </a>
                 </div>
                 <div class="page-holder disp-flex-row">
-                    <a href="contact" class="no-decoration">
+                    <a href="{{url('contact')}}" class="no-decoration">
                         CONTACT
                     </a>
                 </div>
@@ -48,12 +48,12 @@
                 <input type="text" placeholder="Search.." name="search" class="search-box" id="searchbox">
                 <button type="submit"><i class="fa fa-search"></i></button>
             </form>
-                <a href="cart" class=" disp-flex-row">
+                <a href="{{url('cart')}}" class=" disp-flex-row">
                     <i class="fa fa-cart-shopping " id="prodcutcount">
                         0
                     </i>
                 </a>
-                <a href="auth" class=" disp-flex-row">
+                <a href="{{url('auth')}}" class=" disp-flex-row">
                     <i class="fa fa-fw fa-user">
                     </i>
                 </a>

@@ -111,7 +111,8 @@
                     </a>
                 </div>
                 <div class="social-icons">
-                    <a href="{{ $store->last()->whatsappLink}}" class="icon disp-flex-row">
+                <a href="https://wa.me/{{ $store->last()->whatsappLink }}" class="icon disp-flex-row">
+
                     <i class="fa-brands fa-whatsapp"></i>
                     </a>
                 </div>
@@ -136,7 +137,7 @@
         </div>
         <div class="tab">
             <p class="desc copyright">
-                Copyright © 2024 Company Name | Developed by <a href="https://hassansbio.netlify.app/" class="link no-decoration"><u>E N T E R T A I N E R</u></a>
+                Copyright © 2024  {{ $store->last()->storeName}} | Developed by <a href="https://hassansbio.netlify.app/" class="link no-decoration"><u>E N T E R T A I N E R</u></a>
             </p>
         </div>
     </div>
