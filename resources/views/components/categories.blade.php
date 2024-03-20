@@ -15,19 +15,19 @@
             @else
                 @foreach($producttype as $type)
                     <div class="categories-card disp-flex-col">
-                        <a href="/products">
-                            <img src="{{$type->categoryImage}}" alt="category_img_01" class="cat-img">
-                        </a>
+                 
+                            <img src="{{$type->categoryImage}}" alt=" {{$type->categoryName}}" class="cat-img">
+              
                         <br>
-                        <p class="tagline">
-                            {{$type->categoryName}}
-                        </p>  
+                        <form action="{{url('/cetrgories')}}" method="GET">
+                        <input type="text" value=" {{$type->categoryName}}" class="tagline hidden-input" readonly id="categoryname" name="categoryname">
                         <br>
-                        <a href="/products" class="go shop no-decoration">
+                        <button class="go shop" type="submit">
                             <p class="">
                                 See Products
                             </p>
-                        </a>      
+                        </button>      
+                        </form>
                     </div>
                 @endforeach
             @endif

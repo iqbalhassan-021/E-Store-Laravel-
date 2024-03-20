@@ -234,6 +234,8 @@
     text-align: center;
     padding: .375rem .75rem;
     width: 110px;
+    border: none;
+    cursor: pointer;
 }
 .go p{
     display: block;
@@ -715,7 +717,7 @@
   .button-big{
     background-color: #56ae6c !important;
     height: auto;
-    width: 50%;
+    width: 100%;
     outline: none;
     border: none;
     cursor: pointer;
@@ -1441,7 +1443,33 @@ label {
     }
 
 
+.hidden-input{
+  background-color: white;
+  outline: none;
+  border: none;
+  cursor: not-allowed;
+  text-align: center;
+  width: auto;
+}
 
+.left-input{
+  background-color: white;
+  outline: none;
+  border: none;
+  cursor: not-allowed;
+  text-align: left;
+  width: auto;
+}
+.hidden-textarea{
+  height: auto;
+  background-color: white;
+  outline: none;
+  border: none;
+  cursor: not-allowed;
+  padding: 5px 5px 5px 5px;
+  width: 100%;
+  resize: none; /* Disable textarea resizing */
+}
 
 
     

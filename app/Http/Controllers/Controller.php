@@ -18,11 +18,15 @@ class Controller extends BaseController
         $producttype = DB::table('categories')->get();
         $slider = DB::table('slider')->get();
         $store = DB::table('storedetails')->get();
-        $feauredproducts = DB::table('products')->take(3)->get();
+        $featuredProducts = DB::table('products')
+        ->orderBy('id', 'desc') // Order products by ID column in descending order
+        ->take(3) // Take the first 3 results
+        ->get();
+
         return view('home',[
             'producttype'=>$producttype,
             'slider'=>$slider,
-            'feauredproducts'=> $feauredproducts,
+            'feauredproducts'=> $featuredProducts,
             'store' => $store
         ]);
     }
@@ -88,6 +92,23 @@ class Controller extends BaseController
             'allproducts' => $allproducts
         ]);
     }
+    public function filter_catg(Request $req) { 
+        $category = $req->input('categoryname'); // Retrieve category name from request
+        $producttype = DB::table('categories')->get();
+        $store = DB::table('storedetails')->get();
+        
+        // Query products based on category name
+        $filter = DB::table('products')->where('productCategory', 'like', '%' . $category . '%')->get();
+        // Fetch featured products (if needed)
+    
+        
+        return view('filter', [
+            'producttype' => $producttype,
+            'allproducts' => $filter, // Pass filtered products to the view
+
+            'store' => $store
+        ]);
+    }
     
     public function auth(){
         $producttype = DB::table('categories')->get();
@@ -97,14 +118,7 @@ class Controller extends BaseController
             'store'=> $store
         ]);
     }
-    public function cart(){
-        $store = DB::table('storedetails')->get();
-        $producttype = DB::table('categories')->get();
-        return view('cart',[
-            'producttype'=>$producttype,
-            'store'=> $store
-        ]);
-    }
+
 
 
     public function redirect(){

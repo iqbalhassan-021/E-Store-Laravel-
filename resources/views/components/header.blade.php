@@ -68,7 +68,7 @@
        </div>
        <div class="mobile-nav " id="mobilenav">
 
-                         <form action="search" class="search-form disp-flex-row mbl-search-from">
+                         <form action="search" method="GET" class="search-form disp-flex-row mbl-search-from">
                             <input type="text" placeholder="Search.." name="search" class="search-box" id="searchbox">
                             <button type="submit"><i class="fa fa-search"></i></button>
                         </form>

@@ -26,7 +26,7 @@ Route::post('login',[auth_controller::class,'login']);
 Route::post('the_products',[product_controller::class,'the_products']);
 Route::get('delete/{id}',[product_controller::class,'delete']);
 Route::post('the_categories',[product_categories::class,'the_categories']);
-
+Route::get('/cetrgories',[Controller::class,'filter_catg']);
 Route::post('the_slider',[product_slider::class,'the_slider']);
 
 Route::post('store_details',[edit_store::class,'store_details']);

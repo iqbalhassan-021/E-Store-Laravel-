@@ -98,9 +98,7 @@
                          <button class="button button-big" data-fancybox data-src="#orderPopup" >
                             Buy
                         </button> 
-                        <button class="button button-big" id="addcart">
-                            Add To Cart
-                        </button> 
+
                 </div>
             </div>
             </div>
