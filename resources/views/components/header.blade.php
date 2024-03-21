@@ -17,7 +17,6 @@
             <div class="logoholder disp-flex-row" id="logoholder">
                 <a href="/" class="logo no-decoration" >
                     {{ $store->last()->storeName}}
-      
                 </a>
             </div>
             <div class="pages disp-flex-row" id="pages">
@@ -29,6 +28,11 @@
                 <div class="page-holder disp-flex-row">
                     <a href="{{url('about')}}" class="no-decoration">
                         ABOUT
+                    </a>
+                </div>
+                <div class="page-holder disp-flex-row">
+                    <a href="{{url('blogs')}}" class="no-decoration">
+                        Blogs
                     </a>
                 </div>
                 <div class="page-holder disp-flex-row">
@@ -48,11 +52,7 @@
                 <input type="text" placeholder="Search.." name="search" class="search-box" id="searchbox">
                 <button type="submit"><i class="fa fa-search"></i></button>
             </form>
-                <a href="{{url('cart')}}" class=" disp-flex-row">
-                    <i class="fa fa-cart-shopping " id="prodcutcount">
-                        0
-                    </i>
-                </a>
+               
                 <a href="{{url('auth')}}" class=" disp-flex-row">
                     <i class="fa fa-fw fa-user">
                     </i>

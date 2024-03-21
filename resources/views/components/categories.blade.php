@@ -19,8 +19,8 @@
                             <img src="{{$type->categoryImage}}" alt=" {{$type->categoryName}}" class="cat-img">
               
                         <br>
-                        <form action="{{url('/cetrgories')}}" method="GET">
-                        <input type="text" value=" {{$type->categoryName}}" class="tagline hidden-input" readonly id="categoryname" name="categoryname">
+                        <form action="{{url('/cetrgories')}}" method="GET" class="category-form">
+                        <input type="text" value=" {{$type->categoryName}}" class="tagline hidden-input category-input" readonly id="categoryname" name="categoryname">
                         <br>
                         <button class="go shop" type="submit">
                             <p class="">

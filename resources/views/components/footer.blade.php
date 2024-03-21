@@ -92,7 +92,13 @@
                                 </a>
                             </p>
                         </li>
-
+                        <li>
+                            <p class="desc">
+                                <a href="{{url('/blogs')}}" class="no-decoration">
+                                    Blogs
+                                </a>
+                            </p>
+                        </li>
                     </ul>
                 </div>
      

@@ -79,6 +79,12 @@
     height: 100%;
     width: 60%;
 }
+.short-content {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;  
+}
 .no-decoration{
     text-decoration: none;
 }
@@ -215,16 +221,17 @@
 
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 10px;
+    gap: 5px;
     padding: 5px 0px 5px 0px;
 }
 .categories-card{
+  margin-top: 10px;
     height: auto;
-    width: auto;
+    width: 100%;
 }
 .cat-img{
-    height: 250px;
-    width: 250px;
+    height: 200px;
+    width: 200px;
     border-radius: 50%;
 }
 .go{
@@ -1451,7 +1458,9 @@ label {
   text-align: center;
   width: auto;
 }
-
+.category-input{
+  width: 200px;
+}
 .left-input{
   background-color: white;
   outline: none;
@@ -1472,7 +1481,71 @@ label {
 }
 
 
-    
+.category-form{
+  width: 200px;
+}
+.blog-image {
+  width: 100%;
+  height: auto;
+}
+
+
+
+
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+
+}
+
+
+
+.banner{
+  width: 100%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+
+
+/* Add a card effect for articles */
+.blog-card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+   height: auto;
+   width: 100%;
+  
+}
+.short-conent{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+}
 /*Tablet*/
 @media screen and (max-width: 781px) {
   /*Landing Page*/
@@ -1709,16 +1782,14 @@ label {
 
 
 }
-@media screen and (min-width: 780px) and (max-width: 1090px) {
+@media screen and (min-width: 780px) and (max-width: 1115px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .categories-grid{
     grid-template-columns:repeat(2,1fr);
   }
-    .search-form{
-    display: none;
-  }
+
   .grid-f3{
     grid-template-columns:repeat(2,1fr);
   }
@@ -1735,4 +1806,10 @@ label {
 .grid-f3{
   grid-template-columns:repeat(4,1fr);
 }
+}
+@media screen and (min-width: 610px) and (max-width: 880px) {
+  .logoholder{
+
+    width: 30%;
+  }
 }

@@ -2,6 +2,7 @@
 use App\Http\Controllers\auth_controller;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\edit_store;
+use App\Http\Controllers\new_blogs;
 use App\Http\Controllers\new_orders;
 use App\Http\Controllers\order_controller;
 use App\Http\Controllers\product_categories;
@@ -33,3 +34,6 @@ Route::post('store_details',[edit_store::class,'store_details']);
 Route::post('new_subscriber',[store_subscribers::class,'new_subscriber']);
 Route::post('new_queries',[user_queries::class,'new_queries']);
 Route::post('place_order',[new_orders::class,'place_order']);
+Route::post('post_blog',[new_blogs::class,'add_blog']);
+Route::get('/blogs',[Controller::class,'blogs']);
+Route::get('/single/{id}',[Controller::class,'single']);

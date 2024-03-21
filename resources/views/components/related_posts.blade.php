@@ -28,11 +28,7 @@
                                         <span>{{$products->id}}</span>
                                     </a>
                                 </div>
-                                <div class="tab">
-                                    <p class="desc">
-                                        {{$products->productDescription}}
-                                    </p>
-                                </div>
+
                             </div>
                         @endforeach
                     @endif

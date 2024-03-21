@@ -52,6 +52,7 @@ class auth_controller extends Controller
                 $categories_count = $categories->count();
                 $user_count = $users->count();
                 $order_count = $order->count();
+                $blog = DB::table('blog')->get();
                 // Pass variables to the view using compact()
                 return view('admin', [
                     'srnum' => $srnum,
@@ -68,7 +69,8 @@ class auth_controller extends Controller
                     'queries' => $queries,
                     'store' => $store,
                     'order' => $order,
-                    'order_count' => $order_count
+                    'order_count' => $order_count,
+                    'blog' => $blog
                 ]);
             }
             else{

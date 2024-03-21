@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\blog;
 use App\Models\person;
 use App\Models\products;
 use Illuminate\Http\Request;
@@ -36,6 +37,28 @@ class Controller extends BaseController
         return view('about',[
             'producttype'=>$producttype,
             'store'=> $store
+        ]);
+    }
+    public function blogs(){
+        $producttype = DB::table('categories')->get();
+        $store = DB::table('storedetails')->get();
+        $blog = DB::table('blog')->get();
+        return view('blogs',[
+            'producttype'=>$producttype,
+            'store'=> $store,
+            'blog' => $blog
+        ]);
+    }
+    public function single($id){
+        $producttype = DB::table('categories')->get();
+        $store = DB::table('storedetails')->get();
+        $blog = blog::find($id);
+        $all_posts = DB::table('blog')->get();
+        return view('single',[
+            'producttype'=>$producttype,
+            'store'=> $store,
+            'blog' => $blog,
+            'all_posts' => $all_posts
         ]);
     }
     public function contact(){

@@ -27,67 +27,72 @@
                 {{ $store->last()->storeName}}
                 </strong>
             </p>
-            <button class="dash-btn" id="dash-btn" onclick="showdive('dasboard','editstore','editslides','editadmin','newcatg','editprods','neworders','feedbacks','userstable','subscribers','queries')" >
+            <button class="dash-btn" id="dash-btn" onclick="showdive('dasboard','editstore','editslides','editadmin','newcatg','editprods','neworders','blogs','userstable','subscribers','queries')" >
                 <p class="desc">
                 <i class="fa-solid fa-gauge"></i>
                  <span class="x-dash-btn" id="x-dash-btn">Dashboard</span>
                 </p>
             </button>
-            <button class="dash-btn"  id="dash-btn" onclick="showdive('editstore','dasboard','editslides','editadmin','newcatg','editprods','neworders','userstable','feedbacks','subscribers','queries')">
+            <button class="dash-btn"  id="dash-btn" onclick="showdive('editstore','dasboard','editslides','editadmin','newcatg','editprods','neworders','userstable','blogs','subscribers','queries')">
                 <p class="desc">
                 <i class="fa-solid fa-store"></i>
                 <span class="x-dash-btn " id="x-dash-btn">Edit Store</span>
                 </p>
             </button>
-            <button class="dash-btn"  id="dash-btn" onclick="showdive('editslides','editstore','dasboard','editadmin','newcatg','editprods','neworders','userstable','feedbacks','subscribers','queries')">
+            <button class="dash-btn"  id="dash-btn" onclick="showdive('editslides','editstore','dasboard','editadmin','newcatg','editprods','neworders','userstable','blogs','subscribers','queries')">
                 <p class="desc">
                 <i class="fa-brands fa-slideshare"></i>
                 <span class="x-dash-btn" id="x-dash-btn">Slider</span>
                 </p>
             </button>
-            <button class="dash-btn"  id="dash-btn" onclick="showdive('editadmin','editslides','dasboard','newcatg','editprods','neworders','userstable','feedbacks','editstore','subscribers','queries')">
+            <button class="dash-btn"  id="dash-btn" onclick="showdive('editadmin','editslides','dasboard','newcatg','editprods','neworders','userstable','blogs','editstore','subscribers','queries')">
                 <p class="desc">
                 <i class="fa-solid fa-user"></i>
                 <span class="x-dash-btn" id="x-dash-btn">Edit Profile</span>
                 </p>
             </button>
-            <button class="dash-btn"  id="dash-btn" onclick="showdive('newcatg','editadmin','editslides','dasboard','editprods','neworders','userstable','feedbacks','editstore','subscribers','queries')">
+            <button class="dash-btn"  id="dash-btn" onclick="showdive('newcatg','editadmin','editslides','dasboard','editprods','neworders','userstable','blogs','editstore','subscribers','queries')">
                 <p class="desc">
                 <i class="fa-solid fa-list"></i>
                 <span class="x-dash-btn" id="x-dash-btn">Categories</span>
                 </p>
             </button>
-            <button class="dash-btn"  id="dash-btn" onclick="showdive('editprods','newcatg','editadmin','editslides','dasboard','neworders','userstable','feedbacks','editstore','subscribers','queries')">
+            <button class="dash-btn"  id="dash-btn" onclick="showdive('editprods','newcatg','editadmin','editslides','dasboard','neworders','userstable','blogs','editstore','subscribers','queries')">
                 <p class="desc">
                 <i class="fa-brands fa-product-hunt"></i>
                 <span class="x-dash-btn">Products</span>
                 </p>
             </button>
-            <button class="dash-btn"  id="dash-btn" onclick="showdive('neworders','editprods','newcatg','editadmin','editslides','dasboard','userstable','feedbacks','editstore','subscribers','queries')">
+            <button class="dash-btn"  id="dash-btn" onclick="showdive('neworders','editprods','newcatg','editadmin','editslides','dasboard','userstable','blogs','editstore','subscribers','queries')">
                 <p class="desc">
                 <i class="fa-solid fa-border-all"></i>
                 <span class="x-dash-btn" id="x-dash-btn" >New Orders</span>
                 </p>
             </button>
-            <button class="dash-btn"  id="dash-btn" onclick="showdive('userstable','neworders','editprods','newcatg','editadmin','editslides','dasboard','feedbacks','editstore','subscribers','queries')">
+            <button class="dash-btn"  id="dash-btn" onclick="showdive('userstable','neworders','editprods','newcatg','editadmin','editslides','dasboard','blogs','editstore','subscribers','queries')">
                 <p class="desc">
                 <i class="fa-solid fa-user"></i>
                 <span class="x-dash-btn" id="x-dash-btn">Users</span>
                 </p>
             </button>
-            <button class="dash-btn"  id="dash-btn" onclick="showdive('subscribers','neworders','editprods','newcatg','editadmin','editslides','dasboard','feedbacks','editstore','userstable','queries')">
+            <button class="dash-btn"  id="dash-btn" onclick="showdive('subscribers','neworders','editprods','newcatg','editadmin','editslides','dasboard','blogs','editstore','userstable','queries')">
                 <p class="desc">
                 <i class="fa-solid fa-check"></i>
                 <span class="x-dash-btn" id="x-dash-btn">Subscribers</span>
                 </p>
             </button>
-            <button class="dash-btn"  id="dash-btn" onclick="showdive('queries','neworders','editprods','newcatg','editadmin','editslides','dasboard','feedbacks','editstore','userstable','subscribers')">
+            <button class="dash-btn"  id="dash-btn" onclick="showdive('queries','neworders','editprods','newcatg','editadmin','editslides','dasboard','blogs','editstore','userstable','subscribers')">
                 <p class="desc">
                 <i class="fa-solid fa-message"></i>
                 <span class="x-dash-btn" id="x-dash-btn">Queries</span>
                 </p>
             </button>
-
+            <button class="dash-btn"  id="dash-btn" onclick="showdive('blogs','neworders','editprods','newcatg','editadmin','editslides','dasboard','queries','editstore','userstable','subscribers')">
+                <p class="desc">
+                <i class="fa-brands fa-blogger-b"></i>
+                <span class="x-dash-btn" id="x-dash-btn">Blogs</span>
+                </p>
+            </button>
         <a href="/">
             <button class="dash-btn"  id="dash-btn">
                 <p class="desc">
@@ -357,8 +362,7 @@
                 <input type="file" id="categoryImage" name="categoryImage" class="input-field" ccept="image/png, image/jpeg" required><br>
                 <label for="categoryName">Category Name:</label><br>
                 <input type="text" id="categoryName" name="categoryName" class="input-field" required><br>
-                <label for="id">Category ID:</label><br>
-                <input type="text" id="id" name="id" class="input-field" required placeholder="same as name"><br>
+
                 <input type="submit" value="Add Category" class="submit-btn">
             </form>
             <!-- Add more rows as needed -->
@@ -532,48 +536,44 @@
     </table>
     <Button class="submit-btn ">Copy</Button>
             </div>
-            <div class="all-feedbacks" id="feedbacks">
+            <div class="all-feedbacks" id="blogs">
             <table class="all-user">
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Username</th>
-                <th>Phone Number or Email</th>
-                <th>Feedbacks</th>
+                <th>Blog Image</th>
+                <th>Blog Title</th>
+                <th>Blog Content</th>
             </tr>
         </thead>
         <tbody>
-            <!-- Sample row, replace with dynamic data -->
-            <tr>
-                <td>John Doe</td>
-                <td>johndoe123</td>
-                <td>john@example.com</td>
-                <td>I recently purchased the [Product Name] from [E-commerce Platform]. Overall, I am quite satisfied with my purchase and would like to share my experience with other potential buyers.</td>
-            </tr>
-            <tr>
-                <td>John Doe</td>
-                <td>johndoe123</td>
-                <td>john@example.com</td>
-              
-                <td>I recently purchased the [Product Name] from [E-commerce Platform]. Overall, I am quite satisfied with my purchase and would like to share my experience with other potential buyers.</td>
-            </tr>
-            <tr>
-                <td>John Doe</td>
-                <td>johndoe123</td>
-                <td>john@example.com</td>
-              
-                <td>I recently purchased the [Product Name] from [E-commerce Platform]. Overall, I am quite satisfied with my purchase and would like to share my experience with other potential buyers.</td>
-            </tr>
-            <tr>
-                <td>John Doe</td>
-                <td>johndoe123</td>
-                <td>john@example.com</td>
-              
-                <td>I recently purchased the [Product Name] from [E-commerce Platform]. Overall, I am quite satisfied with my purchase and would like to share my experience with other potential buyers.</td>
-            </tr>
-            <!-- Add more rows as needed -->
+        @foreach($blog as $blogs)
+          <tr>
+            <td>
+            <img src="{{$blogs->blogimg}}" alt="{{$blogs->blogimg}}">
+            </td>
+            <td>
+                {{$blogs->blogtitle}}
+            </td>
+            <td>
+                {{$blogs->blogcontent}}
+            </td>
+          </tr>
+          @endforeach
         </tbody>
     </table>
+    <form action="post_blog" method="post" enctype="multipart/form-data">
+    @csrf <!-- CSRF protection -->
+        <label for="blogimg">Blog Image:</label><br>
+        <input type="file" id="blogimg" name="blogimg" class="input-field" accept="image/png, image/jpeg" required><br>
+        
+        <label for="blogtitle">Blog Ttile :</label><br>
+        <input type="text" id="blogtitle" name="blogtitle" class="input-field" required><br>
+        
+        <label for="blogcontent">Blog Content:</label><br>
+        <textarea id="blogcontent" name="blogcontent" class="input-field" required></textarea><br>
+        
+        <input type="submit" value="Post" class="submit-btn">
+    </form>
             </div>
             </div>
 </div>

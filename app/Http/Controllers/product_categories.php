@@ -18,7 +18,7 @@ class product_categories extends Controller
         }
         $category = new category();
         $category->categoryName = $request->categoryName;
-        $category->id = $request->id;
+        $category->id = $request->categoryName;
         $category->categoryImage = $filename;
         $category->save();
         return response()->noContent();
