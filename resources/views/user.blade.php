@@ -22,7 +22,7 @@
 
 <body>
 @include('components.header')
-    <div class="admin-panel disp-row">
+    <div class="admin-panel disp-row " style="min-height: 50vh;">
         
         <div class="nav-panel">
             <div class="sticky">
@@ -36,14 +36,7 @@
                 <button class="dash-btn" id="dash-btn" onclick="showdive('progress','editadmin')">
                     <p class="desc">
                         <i class="fa-brands fa-product-hunt"></i>
-                        <span class="x-dash-btn">Progress</span>
-                    </p>
-                </button>
-                <button class="dash-btn" id="dash-btn">
-                    <p class="desc">
-                    <i class="fa fa-cart-shopping ">
-                    </i>
-                        <span class="x-dash-btn" id="x-dash-btn">Cart</span>
+                        <span class="x-dash-btn">My Orders</span>
                     </p>
                 </button>
                 <a href="/">
@@ -58,19 +51,22 @@
         </div>
         <div class="setting-panel ">
             <div class="edit-admin" id="editadmin">
-                <form action="#" method="post" class="edit-form">
+                <form action="forgotPassword" method="post" class="edit-form">
+                @csrf <!-- CSRF protection -->
                     <label for="username">Username:</label><br>
-                    <input type="text" id="username" name="username" class="input-field" required><br>
-
+                    <input type="text" id="username" name="username" class="input-field" required value="{{$user}}" readonly><br>
+                    <label for="securityquestion">Your last pet was a?</label><br>
+                    <input type="text" id="securityquestion" name="securityquestion" class="input-field" required><br>
                     <label for="password">New Password:</label><br>
                     <input type="password" id="password" name="password" class="input-field" required><br>
 
-                    <label for="confirmPassword">Confirm New Password:</label><br>
-                    <input type="password" id="confirmPassword" name="confirmPassword" class="input-field" required><br>
-                    <label for="securityques">Your last pet was a?</label><br>
-                    <input type="text" id="securityques" name="securityques" class="input-field" required><br>
+                    
+                    <label for="showpass" class="left desc">
+                                <input type="checkbox" name="showpass" id="showpass" class="desc" onclick="showpasswd()">
+                                Show password
+                            </label>
 
-                    <input type="submit" value="Update Account" class="submit-btn">
+                    <input type="submit" value="Update Password" class="submit-btn">
                 </form>
 
             </div>
@@ -79,23 +75,21 @@
                 <table class="all-user">
                     <thead>
                         <tr>
-                            <th>Product Name</th>
-                            <th>Product Code</th>
-                            <th>Tracking ID</th>
+                        <th>Product Name</th>
+                        <th>Product Code</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach($orders as $order)
                         <tr>
-                            <td>Product 1</td>
-                            <td>123456</td>
-                            <td>ABC123</td>
+                           <td>{{$order->productName}}</td>
+                           <td>{{$order->productId}}</td>
+                           <td>{{$order->quantity}}</td>
+                           <td>{{$order->totalPrice}}</td>
                         </tr>
-                        <tr>
-                            <td>Product 2</td>
-                            <td>789012</td>
-                            <td>XYZ456</td>
-                        </tr>
-                        <!-- Add more rows as needed -->
+                        @endforeach
                     </tbody>
                 </table>
             </div>
@@ -103,6 +97,14 @@
     </div>
     @include('components.footer')
 <script>
+    function showpasswd() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
     function showdive(div1,div2){
         //The div to be displayed
         document.getElementById(div1).style.display = "flex";

@@ -43,20 +43,20 @@
     </div>
     @foreach($all_posts as $posts)
     <div class="blog-card">
-                            <a href="{{url('/single/'.$posts->id)}}" class="no-decoration">
-                                <img src="{{$posts->blogimg}}" alt="{{$posts->blogtitle}}" class="blog-image">
-                            </a>
-                            <a href="{{url('/single/'.$posts->id)}}">
-                                <p class="tagline"> 
-                                    <strong>
-                                        {{$posts->blogtitle}}
-                                    </strong>
-                                </p>
-                            </a>
-                            <p class="desc short-content">
-                                {{$posts->blogcontent}}
-                            </p>
-                        </div>
+            <a href="{{url('/single/'.$posts->id)}}" class="no-decoration">
+                <img src="{{$posts->blogimg}}" alt="{{$posts->blogtitle}}" class="blog-image">
+            </a>
+            <a href="{{url('/single/'.$posts->id)}}">
+                <p class="tagline"> 
+                    <strong>
+                        {{$posts->blogtitle}}
+                    </strong>
+                </p>
+            </a>
+            <p class="desc short-content">
+                {{$posts->blogcontent}}
+            </p>
+        </div>
     @endforeach
   </div>
 

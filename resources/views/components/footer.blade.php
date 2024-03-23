@@ -103,7 +103,11 @@
                 </div>
      
             </div>
+            
         </div>
+
+
+        
         <div class="tab disp-row social-section">
             <div class="tab disp-row icons">
                 <div class="social-icons">
@@ -122,11 +126,7 @@
                     <i class="fa-brands fa-whatsapp"></i>
                     </a>
                 </div>
-                <div class="social-icons">
-                    <a href="{{ $store->last()->linkedinLink}}" class="icon disp-flex-row">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                    </a>
-                </div>
+
             </div>
             <div class="tab sub-tab block-right">
                 <div class="sub-holder">

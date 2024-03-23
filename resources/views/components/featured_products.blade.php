@@ -39,7 +39,11 @@
                 @endif
 
             </div>
-            
+            <a href="{{url('/products')}}">
+            <button class="button" style="width:310px;margin-top:20px;">
+                Load More
+            </button>    
+        </a>
         </div>
     </div>
 </div>

@@ -143,7 +143,7 @@
 
             <!-- Buyer Name -->
             <label for="buyername">Buyer Name:</label>
-            <input type="text" name="buyername" placeholder="Buyer name" required class="input-field"><br>
+            <input type="text" name="buyername" placeholder="Username" required class="input-field"><br>
 
             <!-- Phone Number Input -->
             <label for="phone">Phone Number:</label>

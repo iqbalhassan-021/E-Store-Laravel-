@@ -72,16 +72,19 @@
                             <input type="text" placeholder="Search.." name="search" class="search-box" id="searchbox">
                             <button type="submit"><i class="fa fa-search"></i></button>
                         </form>
-                    <a href="#" class="no-decoration">
+                    <a href="/" class="no-decoration">
                          <p class="desc">HOME</p>
                     </a>
-                    <a href="#" class="no-decoration">
+                    <a href="{{url('/about')}}" class="no-decoration">
                          <p class="desc">ABOUT</p>
                     </a>
-                    <a href="#" class="no-decoration">
+                    <a href="{{url('/blogs')}}" class="no-decoration">
+                         <p class="desc">Blogs</p>
+                    </a>
+                    <a href="{{url('products')}}" class="no-decoration">
                          <p class="desc">SHOP</p>
                     </a>
-                    <a href="#" class="no-decoration">
+                    <a href="{{url('/contact')}}" class="no-decoration">
                          <p class="desc">CONTACT</p>
                     </a>
                  

@@ -76,12 +76,14 @@ class auth_controller extends Controller
             else{
                 $store = DB::table('storedetails')->get();
                 $producttype = DB::table('categories')->get();
-                $user = $request->query('username');
+                $user = $request->input('username');
+                $orders = DB::table('orders')->where('buyername', $user)->get();
     
                 return view('user',[
                     'producttype'=>$producttype,
-           
-                    'store'=> $store
+                    'orders' => $orders,
+                    'store'=> $store,
+                    'user' => $user
                 ]);
             }
         }

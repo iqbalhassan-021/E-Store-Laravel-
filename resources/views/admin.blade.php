@@ -27,67 +27,62 @@
                 {{ $store->last()->storeName}}
                 </strong>
             </p>
-            <button class="dash-btn" id="dash-btn" onclick="showdive('dasboard','editstore','editslides','editadmin','newcatg','editprods','neworders','blogs','userstable','subscribers','queries')" >
+            <button class="dash-btn" id="dash-btn" onclick="showdive('dasboard','editstore','editslides','newcatg','editprods','neworders','blogs','userstable','subscribers','queries')" >
                 <p class="desc">
                 <i class="fa-solid fa-gauge"></i>
                  <span class="x-dash-btn" id="x-dash-btn">Dashboard</span>
                 </p>
             </button>
-            <button class="dash-btn"  id="dash-btn" onclick="showdive('editstore','dasboard','editslides','editadmin','newcatg','editprods','neworders','userstable','blogs','subscribers','queries')">
+            <button class="dash-btn"  id="dash-btn" onclick="showdive('editstore','dasboard','editslides','newcatg','editprods','neworders','userstable','blogs','subscribers','queries')">
                 <p class="desc">
                 <i class="fa-solid fa-store"></i>
                 <span class="x-dash-btn " id="x-dash-btn">Edit Store</span>
                 </p>
             </button>
-            <button class="dash-btn"  id="dash-btn" onclick="showdive('editslides','editstore','dasboard','editadmin','newcatg','editprods','neworders','userstable','blogs','subscribers','queries')">
+            <button class="dash-btn"  id="dash-btn" onclick="showdive('editslides','editstore','dasboard','newcatg','editprods','neworders','userstable','blogs','subscribers','queries')">
                 <p class="desc">
                 <i class="fa-brands fa-slideshare"></i>
                 <span class="x-dash-btn" id="x-dash-btn">Slider</span>
                 </p>
             </button>
-            <button class="dash-btn"  id="dash-btn" onclick="showdive('editadmin','editslides','dasboard','newcatg','editprods','neworders','userstable','blogs','editstore','subscribers','queries')">
-                <p class="desc">
-                <i class="fa-solid fa-user"></i>
-                <span class="x-dash-btn" id="x-dash-btn">Edit Profile</span>
-                </p>
-            </button>
-            <button class="dash-btn"  id="dash-btn" onclick="showdive('newcatg','editadmin','editslides','dasboard','editprods','neworders','userstable','blogs','editstore','subscribers','queries')">
+
+            <button class="dash-btn"  id="dash-btn" onclick="showdive('newcatg','editslides','dasboard','editprods','neworders','userstable','blogs','editstore','subscribers','queries')">
                 <p class="desc">
                 <i class="fa-solid fa-list"></i>
                 <span class="x-dash-btn" id="x-dash-btn">Categories</span>
                 </p>
             </button>
-            <button class="dash-btn"  id="dash-btn" onclick="showdive('editprods','newcatg','editadmin','editslides','dasboard','neworders','userstable','blogs','editstore','subscribers','queries')">
+            <button class="dash-btn"  id="dash-btn" onclick="showdive('editprods','newcatg','editslides','dasboard','neworders','userstable','blogs','editstore','subscribers','queries')">
                 <p class="desc">
                 <i class="fa-brands fa-product-hunt"></i>
                 <span class="x-dash-btn">Products</span>
                 </p>
             </button>
-            <button class="dash-btn"  id="dash-btn" onclick="showdive('neworders','editprods','newcatg','editadmin','editslides','dasboard','userstable','blogs','editstore','subscribers','queries')">
+            <button class="dash-btn"  id="dash-btn" onclick="showdive('neworders','editprods','newcatg','editslides','dasboard','userstable','blogs','editstore','subscribers','queries')">
                 <p class="desc">
                 <i class="fa-solid fa-border-all"></i>
                 <span class="x-dash-btn" id="x-dash-btn" >New Orders</span>
                 </p>
             </button>
-            <button class="dash-btn"  id="dash-btn" onclick="showdive('userstable','neworders','editprods','newcatg','editadmin','editslides','dasboard','blogs','editstore','subscribers','queries')">
+            <button class="dash-btn"  id="dash-btn" onclick="showdive('userstable','neworders','editprods','newcatg','editslides','dasboard','blogs','editstore','subscribers','queries')">
                 <p class="desc">
                 <i class="fa-solid fa-user"></i>
                 <span class="x-dash-btn" id="x-dash-btn">Users</span>
                 </p>
             </button>
-            <button class="dash-btn"  id="dash-btn" onclick="showdive('subscribers','neworders','editprods','newcatg','editadmin','editslides','dasboard','blogs','editstore','userstable','queries')">
+            <button class="dash-btn"  id="dash-btn" onclick="showdive('subscribers','neworders','editprods','newcatg','editslides','dasboard','blogs','editstore','userstable','queries')">
                 <p class="desc">
                 <i class="fa-solid fa-check"></i>
                 <span class="x-dash-btn" id="x-dash-btn">Subscribers</span>
                 </p>
             </button>
-            <button class="dash-btn"  id="dash-btn" onclick="showdive('queries','neworders','editprods','newcatg','editadmin','editslides','dasboard','blogs','editstore','userstable','subscribers')">
+            <button class="dash-btn"  id="dash-btn" onclick="showdive('queries','neworders','editprods','newcatg','editslides','dasboard','blogs','editstore','userstable','subscribers')">
                 <p class="desc">
                 <i class="fa-solid fa-message"></i>
                 <span class="x-dash-btn" id="x-dash-btn">Queries</span>
                 </p>
             </button>
-            <button class="dash-btn"  id="dash-btn" onclick="showdive('blogs','neworders','editprods','newcatg','editadmin','editslides','dasboard','queries','editstore','userstable','subscribers')">
+            <button class="dash-btn"  id="dash-btn" onclick="showdive('blogs','neworders','editprods','newcatg','editslides','dasboard','queries','editstore','userstable','subscribers')">
                 <p class="desc">
                 <i class="fa-brands fa-blogger-b"></i>
                 <span class="x-dash-btn" id="x-dash-btn">Blogs</span>
@@ -178,93 +173,36 @@
                 </div>
             </div>
             <div class="edit-store" id="editstore">
-                <table class="all-user">
-                    <tr>
-                        <th>
-                        Store Name
-                        </th>
-                        <th>
-                        Facebook Link
-                        </th>
-                        <th>
-                        Instagram Link
-                        </th>
-                        <th>
-                        Whatsapp Link
-                        </th>
-                        <th>
-                        Linkedin Link
-                        </th>
-                        <th>
-                        Store Address
-                        </th>
-                        <th>
-                        Store Phone
-                        </th>
-                        <th>
-                        Store Email
-                        </th>
-  
-                    </tr>
-                    @foreach($storedetails as $details)
-                        <tr>
-                        <td>
-                        {{$details->storeName}}
-                        </td>
-                        <td>
-                        {{$details->facebookLink}}
-                        </td>
-                        <td>
-                        {{$details->instagramLink}}
-                        </td>
-                        <td>
-                        {{$details->whatsappLink}}
-                        </td>
-                        <td>
-                        {{$details->linkedinLink}}
-                        </td>
-                        <td>
-                        {{$details->storeAddress}}
-                        </td>
-                        <td>
-                        {{$details->storePhone}}
-                        </td>
-                        <td>
-                        {{$details->storeEmail}}
-                        </td>
 
-                        </tr>
-                    @endforeach
-                </table>
                 <h1 class="title">
                     Edit the store
                 </h1>
             <form action="store_details" method="post" class="edit-store-form">
             @csrf <!-- CSRF protection -->
         <label for="storeName">Store Name:</label><br>
-        <input type="text" id="storeName" name="storeName" class="input-field" required value=""><br>
+        <input type="text" id="storeName" name="storeName" class="input-field" required value="{{$storedetails->last()->storeName}}"><br>
         
         
         <label for="facebookLink">Facebook Link:</label><br>
-        <input type="text" id="facebookLink" name="facebookLink" class="input-field" required><br>
+        <input type="text" id="facebookLink" name="facebookLink" class="input-field" required value="{{$storedetails->last()->facebookLink}}"><br>
         
         <label for="instagramLink">Instagram Link:</label><br>
-        <input type="text" id="instagramLink" name="instagramLink" class="input-field" required><br>
+        <input type="text" id="instagramLink" name="instagramLink" class="input-field" required value="{{$storedetails->last()->instagramLink}}"><br>
         
         <label for="whatsappLink">WhatsApp Link:</label><br>
-        <input type="text" id="whatsappLink" name="whatsappLink" class="input-field" required><br>
+        <input type="text" id="whatsappLink" name="whatsappLink" class="input-field" required value="{{$storedetails->last()->whatsappLink}}"><br>
         
         <label for="linkedinLink">LinkedIn Link:</label><br>
-        <input type="text" id="linkedinLink" name="linkedinLink" class="input-field" required><br>
+        <input type="text" id="linkedinLink" name="linkedinLink" class="input-field" required value="{{$storedetails->last()->linkedinLink}}"><br>
         
         <label for="storeAddress">Store Address:</label><br>
-        <textarea id="storeAddress" name="storeAddress" class="input-field" required></textarea><br>
+        <textarea id="storeAddress" name="storeAddress" class="input-field" required >{{$storedetails->last()->storeAddress}}</textarea><br>
         
         <label for="storePhone">Store Phone Number:</label><br>
-        <input type="text" id="storePhone" name="storePhone" class="input-field" required><br>
+        <input type="text" id="storePhone" name="storePhone" class="input-field" required value="{{$storedetails->last()->storePhone}}"><br>
         
         <label for="storeEmail">Store Email:</label><br>
-        <input type="text" id="storeEmail" name="storeEmail" class="input-field" required><br>
+        <input type="text" id="storeEmail" name="storeEmail" class="input-field" required value="{{$storedetails->last()->storeEmail}}"><br>
         
         <input type="submit" value="Submit" class="submit-btn">
     </form>
@@ -317,23 +255,7 @@
                 <input type="submit" value="Submit" class="submit-btn">
     </form>
             </div>
-            <div class="edit-admin" id="editadmin">
-            <form action="#" method="post">
-        <label for="username">Username:</label><br>
-        <input type="text" id="username" name="username" class="input-field" required><br>
-        
-        <label for="password">New Password:</label><br>
-        <input type="password" id="password" name="password" class="input-field" required><br>
-        
-        <label for="confirmPassword">Confirm New Password:</label><br>
-        <input type="password" id="confirmPassword" name="confirmPassword" class="input-field" required><br>
-        <label for="securityques">Your last pet was a?</label><br>
-        <input type="text" id="securityques" name="securityques" class="input-field" required><br>
-        
-        <input type="submit" value="Update Account" class="submit-btn">
-    </form>
 
-            </div>
             <div class="new-categories" id="newcatg">
             <table class="all-user">
         <thead>
@@ -456,10 +378,11 @@
                 <td>{{$item->phone}}</td>
                 <td>{{$item->productName}}</td>
                 <td>{{$item->productId}}</td>
+                <td>{{$item->quantity}}</td>
                 <td>{{$item->productPrice}}</td>
                 <td>
                 <button class="submit-btn ">Aprove</button>
-                   <button class="submit-btn warning">Remove</button>   
+                 
                 </td>
             </tr>
             @endforeach
@@ -628,7 +551,7 @@ function collapse() {
         document.getElementById(div8).style.display = "none";
         document.getElementById(div9).style.display = "none";
         document.getElementById(div10).style.display = "none";
-        document.getElementById(div11).style.display = "none";
+
 
     }
 </script>

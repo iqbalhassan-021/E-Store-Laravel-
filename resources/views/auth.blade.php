@@ -85,7 +85,7 @@
                             </span>
                             <input type="submit" class="login desc" value="Signup">
                         </form>
-                        <form class="resetpass-form disp-flex-col" id="resetpass">
+                        <form class="resetpass-form disp-flex-col" id="resetpass" method="post" action="forgotPassword">
                         @csrf <!-- CSRF protection -->
                         <label for="username" class="desc left">Username</label>
                             <input required class="input-field login-input desc" type="text" id="username" name="username" placeholder="username">
@@ -101,7 +101,7 @@
                                     @endif
                                 </p>
                             </span>
-                            <input type="submit" class="login desc" value="Signup">
+                            <input type="submit" class="login desc" value="Change Password">
                         </form>
                     </div>
                 </div>

@@ -979,6 +979,9 @@
   width: 20%;
   background-color: white;
 }
+.userpanel{
+  height: 50vh;
+}
 .user-settings{
   height: auto;
   width: 80%;

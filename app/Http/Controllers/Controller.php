@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\blog;
 use App\Models\person;
 use App\Models\products;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -142,7 +143,27 @@ class Controller extends BaseController
         ]);
     }
 
-
+    public function forgotPassword(Request $request)
+    {
+        // Retrieve inputs from the request
+        $username = $request->input("username");
+        $security = $request->input("securityquestion");
+        $password = $request->input("password");
+    
+        // Query the persons table to find the user
+        $user = DB::table('person')->where('username', $username)->first();
+    
+        // Check if user exists and security question matches
+        if ($user && $user->securityquestion === $security) {
+            // Update the user's password
+            DB::table('person')->where('username', $username)->update(['password' => $password]);
+    
+            return response()->noContent();
+        } else {
+            return redirect()->back()->with('error', 'Wrong credentials');// Redirect to an error view
+        }
+    }
+    
 
     public function redirect(){
         $store = DB::table('storedetails')->get();
