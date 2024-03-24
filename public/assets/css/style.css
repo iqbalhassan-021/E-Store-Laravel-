@@ -1747,7 +1747,7 @@ label {
     padding: 20px 5px 10px 5px;
   }
   .card{
-    width: 350px;
+    width: 180px;
   }
   .footer{
     padding: 20px 5px 10px 5px;
@@ -1767,7 +1767,7 @@ label {
     flex-direction: row;
   }
   .grid-f3{
-    grid-template-columns:repeat(1,1fr);
+    grid-template-columns:repeat(2,1fr);
   }
   .comment-form{
     display: flex;
@@ -1783,7 +1783,17 @@ label {
     width: 100%;
   }
 
-
+.tagline{
+  font-size: 18px;
+}
+}
+@media screen and (max-width: 390px) {
+  .grid-f3{
+    grid-template-columns:repeat(1,1fr);
+  }
+  .card{
+    width: 310px;
+  }
 }
 @media screen and (min-width: 780px) and (max-width: 1115px) {
   .grid {

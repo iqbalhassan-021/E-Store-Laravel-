@@ -27,7 +27,7 @@
             <div class="product-container disp-row">
             <div class="product-visual ">
                 <div class="container">
-                    <img src="{{$product->productImage}}" alt="Product">
+                    <img src="{{$product->productImage}}" alt="{{$product->productName}}">
                 </div>
             </div>
             <div class="product-details">
