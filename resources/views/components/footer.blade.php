@@ -44,15 +44,20 @@
                     </h2>
                     <hr style="width:100%;text-align:left;margin-left:0">
                     <ul>
-                        @foreach($producttype as $type)
-                        <li>
-                            <p class="desc">
-                                <a href="{{url('/products')}}" class="no-decoration">
-                                 {{$type->categoryName}}
-                                </a>
-                            </p>
-                        </li>
-                        @endforeach
+                    @if(count($producttype)<1)
+    <p class="desc" style="color: white;">No product types available</p>
+@else
+    <ul>
+        @foreach($producttype as $type)
+            <li>
+                <p class="desc">
+                    <a href="{{url('/products')}}" class="no-decoration">{{$type->categoryName}}</a>
+                </p>
+            </li>
+        @endforeach
+    </ul>
+@endif
+
                     </ul>
                 </div>
      

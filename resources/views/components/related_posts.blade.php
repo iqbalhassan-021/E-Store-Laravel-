@@ -4,7 +4,7 @@
 
             <div class="show-products disp-flex-row">
                 <div class="grid-f3">
-                @if($allproducts->isEmpty())
+                @if(count($allproducts)<1)
                 <p><strong>No products available yet.</strong></p>
                     @else
                         @foreach($allproducts as $products)

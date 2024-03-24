@@ -9,8 +9,8 @@
             This product is often chosen by the store owner or manager to showcase a particular item that they want to promote or draw attention to.
             </p>
             <div class="featured-prods grid">
-            @if($feauredproducts ->isEmpty())
-            <p>No featured products available yet.</p>
+            @if(count($feauredproducts)<1)
+            <p class="tagline">No featured products available yet.</p>
                 @else
                     @foreach($feauredproducts  as $products)
                         <div class="card">

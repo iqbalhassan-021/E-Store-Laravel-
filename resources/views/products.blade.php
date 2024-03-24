@@ -22,8 +22,8 @@
 
             <div class="show-products disp-flex-row">
                 <div class="grid-f3">
-                @if($allproducts->isEmpty())
-                <p><strong>No products available yet.</strong></p>
+                @if(count($allproducts)<1)
+                <p class="desc"><strong>No products available yet.</strong></p>
                     @else
                         @foreach($allproducts as $products)
                             <div class="card">
