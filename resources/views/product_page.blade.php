@@ -95,10 +95,17 @@
                 <p class="desc"><strong>Total: </strong>$<span id="total"></span></p>
                 </div>
                 <div class="buy-cart disp-flex-row">
-                         <button class="button button-big" data-fancybox data-src="#orderPopup" >
-                            Buy
+                    @if($user_name)
+                    <button class="button button-big" data-fancybox data-src="#orderPopup" >
+                            <p class="desc" style="color: white;">Buy</p>
                         </button> 
-
+                    @else
+                    <a href="{{url('/auth')}}">
+                    <button class="button button-big" >
+                        <p class="desc" style="color: white;">Login to buy the product</p> 
+                        </button> 
+                        </a> 
+                    @endif
                 </div>
             </div>
             </div>
@@ -140,14 +147,17 @@
             <!-- Total -->
             <label for="totalPrice">Total:</label>
             <input type="text" id="totalPrice" name="totalPrice" value="" class="input-field" readonly>
+           
+            <label for="username">Username:</label>
+            <input type="text" name="username" placeholder="Buyer Name" required class="input-field" value="{{$user_name}}" readonly><br>
 
             <!-- Buyer Name -->
             <label for="buyername">Buyer Name:</label>
-            <input type="text" name="buyername" placeholder="Username" required class="input-field"><br>
+            <input type="text" name="buyername" placeholder="Buyer name" required class="input-field" ><br>
 
             <!-- Phone Number Input -->
             <label for="phone">Phone Number:</label>
-            <input type="text" name="phone" placeholder="Enter Phone Number" required class="input-field"><br>
+            <input type="text" name="phone" placeholder="Enter Phone Number or any contact details" required class="input-field"><br>
 
             <label for="address">Address:</label>
             <textarea name="address" id="address" class="desc" rows="5" style="width: 100%; padding: 10px;" placeholder="Address" required></textarea>

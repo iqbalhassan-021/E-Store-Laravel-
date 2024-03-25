@@ -54,7 +54,7 @@
                 <form action="forgotPassword" method="post" class="edit-form">
                 @csrf <!-- CSRF protection -->
                     <label for="username">Username:</label><br>
-                    <input type="text" id="username" name="username" class="input-field" required value="{{$user}}" readonly><br>
+                    <input type="text" id="username" name="username" class="input-field" required value="{{$user_name}}" readonly><br>
                     <label for="securityquestion">Your last pet was a?</label><br>
                     <input type="text" id="securityquestion" name="securityquestion" class="input-field" required><br>
                     <label for="password">New Password:</label><br>

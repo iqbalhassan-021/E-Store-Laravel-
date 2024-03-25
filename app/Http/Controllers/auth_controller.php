@@ -77,13 +77,14 @@ class auth_controller extends Controller
                 $store = DB::table('storedetails')->get();
                 $producttype = DB::table('categories')->get();
                 $user = $request->input('username');
-                $orders = DB::table('orders')->where('buyername', $user)->get();
-    
+                $orders = DB::table('orders')->where('username', $user)->get();
+                $request->session()->put('user', $user);
+                $user_name = $request->session()->get('user');
                 return view('user',[
                     'producttype'=>$producttype,
                     'orders' => $orders,
                     'store'=> $store,
-                    'user' => $user
+                    'user_name' => $user_name
                 ]);
             }
         }

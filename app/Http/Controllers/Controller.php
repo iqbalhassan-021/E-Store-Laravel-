@@ -83,18 +83,20 @@ class Controller extends BaseController
             ]);
     }
 
-    public function product($id){
+    public function product($id,Request  $request) { 
         $producttype = DB::table('categories')->get();
         $store = DB::table('storedetails')->get();
         $feauredproducts = DB::table('products')->take(3)->get();
         $product = products::find($id);
         $allproducts = DB::table('products')->get();
+        $user_name = $request->session()->get('user');
         return view('product_page',[
             'producttype'=>$producttype,
             'feauredproducts'=> $feauredproducts,
             'store'=> $store,
             'allproducts'=> $allproducts,
-            'product' => $product
+            'product' => $product,
+            'user_name' => $user_name
         ]);
     }
     public function search(Request $request) {

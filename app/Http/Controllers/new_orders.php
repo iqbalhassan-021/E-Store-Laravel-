@@ -13,6 +13,7 @@ class new_orders extends Controller
         $order->productId = $request->productId;
         $order->productDescription = $request->productDescription;
         $order->buyername = $request->buyername;
+        $order->username = $request->username;
         $order->productPrice = $request->productPrice;
         $order->productSize = $request->productSize;
         $order->quantity = $request->quantity;
