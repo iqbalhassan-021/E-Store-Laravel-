@@ -340,7 +340,7 @@
                 <p class="card-text">Product Code: {{$item->productId}}</p>
                 <p class="card-text">Quantity: {{$item->quantity}}</p>
                 <p class="card-text">Price: {{$item->productPrice}}</p>
-                <button class="btn btn-primary">Approve</button>
+
             </div>
         </div>
     </div>

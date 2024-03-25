@@ -10,11 +10,12 @@
                 </span>
             </button>
 </div> -->
- 
+
 <div class="header" id="header">
     <div class="body-cover disp-flex-col">
        <div class="navbar disp-flex-row" id="navbar">
             <div class="logoholder disp-flex-row" id="logoholder">
+                <!-- <img src="{{asset('assets/images/banner_img_01.jpg')}}" alt="{{ $store->last()->storeName}}" class="logo-image"> -->
                 <a href="/" class="logo no-decoration" >
                     {{ $store->last()->storeName}}
                 </a>

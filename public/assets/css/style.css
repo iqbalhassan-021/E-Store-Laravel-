@@ -75,6 +75,12 @@
     font-style: normal;
     font-size: 26px;
 }
+.logo-image{
+  width: 50px;
+  display: block;
+  margin-right: auto;
+  margin-left: 20px;
+}
 .pages{
     height: 100%;
     width: 60%;
